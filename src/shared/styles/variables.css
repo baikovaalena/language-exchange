@@ -1,0 +1,19 @@
+:root {
+  /* Typography */
+  --font-sans: var(--font-dm-sans), 'DM Sans', sans-serif;
+  --font-mono: monospace;
+
+  /* Colors */
+  --color-text-primary: #1c1c1c;
+  --color-text-secondary: #6b6b6b;
+  --color-text-muted: #9aa89a;
+  --color-accent: #7aae8e;
+  --color-accent-border: #c8ddd0;
+  --color-warm: #c97242;
+  --color-warm-border: #e8c4a8;
+  --color-cta: #2d5a3d;
+  --color-cta-hover: #244a32;
+  --color-bg-primary: #fff;
+  --color-bg-subtle: #f2f5f0;
+  --color-border: #e8ede8;
+}

@@ -1,0 +1,227 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  padding: 96px 24px 112px;
+  font-family: var(--font-sans);
+  text-align: center;
+
+  @media (max-width: 768px) {
+    padding: 64px 24px 72px;
+  }
+
+  @media (max-width: 400px) {
+    padding: 48px 16px 56px;
+  }
+}
+
+.heroLayout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+  max-width: 600px;
+}
+
+.imagesLeft,
+.imagesRight {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-shrink: 1;
+}
+
+.imagesLeft {
+  align-items: center;
+
+  .avatar:nth-child(1) {
+    translate: 28px -30px;
+    border-color: var(--color-warm);
+    box-shadow: 0 4px 20px rgba(201, 114, 66, 0.18);
+    animation-delay: 0s;
+  }
+  .avatar:nth-child(2) {
+    translate: -48px 0px;
+    animation-delay: -1.8s;
+  }
+  .avatar:nth-child(3) {
+    translate: 28px 30px;
+    border-color: var(--color-warm);
+    box-shadow: 0 4px 20px rgba(201, 114, 66, 0.18);
+    animation-delay: -3.4s;
+  }
+}
+
+.imagesRight {
+  align-items: center;
+
+  .avatar:nth-child(1) {
+    translate: -28px -30px;
+    animation-delay: -0.9s;
+  }
+  .avatar:nth-child(2) {
+    translate: 48px 0px;
+    border-color: var(--color-warm);
+    box-shadow: 0 4px 20px rgba(201, 114, 66, 0.18);
+    animation-delay: -2.5s;
+  }
+  .avatar:nth-child(3) {
+    translate: -28px 30px;
+    animation-delay: -4.1s;
+  }
+}
+
+.avatar {
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid var(--color-accent-border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  animation: avatarFloat 5s ease-in-out infinite;
+}
+
+@keyframes avatarFloat {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+
+.avatarSm {
+  width: 88px;
+  height: 88px;
+}
+
+.avatarMd {
+  width: 108px;
+  height: 108px;
+}
+
+.avatarLg {
+  width: 132px;
+  height: 132px;
+}
+
+@media (max-width: 1024px) {
+  .heroLayout {
+    gap: 20px;
+  }
+
+  .avatarSm {
+    width: 64px;
+    height: 64px;
+  }
+
+  .avatarMd {
+    width: 78px;
+    height: 78px;
+  }
+
+  .avatarLg {
+    width: 96px;
+    height: 96px;
+  }
+
+  .imagesLeft {
+    .avatar:nth-child(1) {
+      translate: 20px -20px;
+    }
+    .avatar:nth-child(2) {
+      translate: -32px 0px;
+    }
+    .avatar:nth-child(3) {
+      translate: 20px 20px;
+    }
+  }
+
+  .imagesRight {
+    .avatar:nth-child(1) {
+      translate: -20px -20px;
+    }
+    .avatar:nth-child(2) {
+      translate: 32px 0px;
+    }
+    .avatar:nth-child(3) {
+      translate: -20px 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .imagesLeft,
+  .imagesRight {
+    display: none;
+  }
+}
+
+.tag {
+  display: inline-block;
+  margin-bottom: 40px;
+  padding: 4px 12px;
+  border: 1px solid var(--color-warm-border);
+  border-radius: 1px;
+  color: var(--color-warm);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.headlineAccent {
+  color: var(--color-warm);
+}
+
+.headline {
+  max-width: 576px;
+  margin-bottom: 24px;
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  font-size: clamp(42px, 6vw, 67px);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.subtext {
+  max-width: 384px;
+  margin-bottom: 48px;
+  color: var(--color-text-secondary);
+  font-size: clamp(14px, 2vw, 16px);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.ctaPrimary {
+  padding: 12px 24px;
+  border-radius: 1px;
+  background-color: var(--color-cta);
+  color: var(--color-bg-primary);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  transition: background-color 0.15s;
+
+  &:hover {
+    background-color: var(--color-cta-hover);
+  }
+}
+
+.ctaSecondary {
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.15s;
+
+  &:hover {
+    color: var(--color-cta);
+  }
+}
