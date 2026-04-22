@@ -1,7 +1,7 @@
 import { IconWorld, IconMessage, IconShieldCheck, IconBolt } from '@tabler/icons-react';
 import { ReactNode } from 'react';
 
-export interface Feature {
+export interface IFeature {
   icon: ReactNode;
   title: string;
   description: string;
@@ -9,7 +9,7 @@ export interface Feature {
   bg: string;
 }
 
-export const features: Feature[] = [
+export const features: IFeature[] = [
   {
     icon: <IconWorld size={24} stroke={1.5} />,
     title: 'Партнёры со всего мира',

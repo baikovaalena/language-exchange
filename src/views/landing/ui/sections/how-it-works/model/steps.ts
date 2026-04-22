@@ -1,10 +1,10 @@
-interface Step {
+interface IStep {
   num: string;
   title: string;
   desc: string;
 }
 
-export const steps: Step[] = [
+export const steps: IStep[] = [
   {
     num: '01',
     title: 'Создайте профиль',
