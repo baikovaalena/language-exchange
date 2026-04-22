@@ -1,75 +1,75 @@
 .section {
-  padding: 96px 0;
   max-width: 1280px;
   margin: 0 auto;
-  padding-left: 24px;
+  padding: 96px 0;
   padding-right: 24px;
+  padding-left: 24px;
 
-  @media (max-width: 768px) {
-    padding-left: 20px;
+  @media (width <= 768px) {
     padding-right: 20px;
+    padding-left: 20px;
   }
 }
 
 .header {
-  text-align: center;
   margin-bottom: 64px;
+  text-align: center;
 }
 
 .tag {
   display: inline-block;
+  margin-bottom: 16px;
   padding: 6px 16px;
-  background: var(--color-primary-light);
   border: 1px solid var(--color-primary-border);
   border-radius: 100px;
+  background: var(--color-primary-light);
   color: var(--color-primary);
   font-family: var(--font-sans);
   font-size: 13px;
   font-weight: 500;
-  margin-bottom: 16px;
 }
 
 .title {
+  margin-bottom: 12px;
+  color: var(--color-text-primary);
   font-family: var(--font-sans);
   font-size: clamp(1.6rem, 4vw, 2.4rem);
   font-weight: 700;
   letter-spacing: -0.025em;
-  color: var(--color-text-primary);
-  margin-bottom: 12px;
 }
 
 .subtitle {
+  color: var(--color-text-secondary);
   font-family: var(--font-sans);
   font-size: 16px;
-  color: var(--color-text-secondary);
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
 
-  @media (max-width: 1024px) {
+  @media (width <= 1024px) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (max-width: 600px) {
+  @media (width <= 600px) {
     grid-template-columns: 1fr;
   }
 }
 
 .card {
-  background: white;
-  border: 1px solid var(--color-border);
-  border-radius: 24px;
-  padding: 28px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  box-shadow: 0 1px 4px rgb(0 0 0 / 4%);
+  padding: 28px;
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  background: white;
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 4%);
 
   &:hover {
     transform: translateY(-4px);
@@ -87,12 +87,12 @@
 }
 
 .text {
+  flex: 1;
+  margin: 0;
+  color: var(--color-text-primary);
   font-family: var(--font-sans);
   font-size: 14px;
   line-height: 1.75;
-  color: var(--color-text-primary);
-  flex: 1;
-  margin: 0;
 }
 
 .author {
@@ -112,16 +112,16 @@
 }
 
 .authorName {
+  margin: 0;
+  color: var(--color-text-primary);
   font-family: var(--font-sans);
   font-size: 14px;
   font-weight: 600;
-  color: var(--color-text-primary);
-  margin: 0;
 }
 
 .authorCountry {
+  margin: 0;
+  color: var(--color-text-secondary);
   font-family: var(--font-sans);
   font-size: 12px;
-  color: var(--color-text-secondary);
-  margin: 0;
 }

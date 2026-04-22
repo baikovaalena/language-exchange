@@ -1,4 +1,7 @@
 .page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   min-height: 100svh;
   padding: 48px 20px;
   background: linear-gradient(
@@ -7,11 +10,8 @@
     var(--color-bg-primary) 60%,
     var(--color-purple-light) 100%
   );
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     padding: 28px 16px;
   }
 }
@@ -24,7 +24,7 @@
   width: 100%;
   max-width: 440px;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     gap: 24px;
   }
 }
@@ -38,18 +38,18 @@
 
 .logo {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 72px;
   height: 72px;
   margin-bottom: 20px;
-  color: white;
-  background: var(--color-primary);
   border-radius: 20px;
-  box-shadow: 0 12px 28px rgb(37 99 235 / 28%);
+  background: var(--color-primary);
+  color: white;
   cursor: pointer;
+  box-shadow: 0 12px 28px rgb(37 99 235 / 28%);
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     width: 56px;
     height: 56px;
     margin-bottom: 14px;
@@ -63,27 +63,27 @@
 }
 
 .brand {
+  margin-bottom: 8px;
+  color: var(--color-text-primary);
   font-family: var(--font-sans);
   font-size: clamp(28px, 4vw, 36px);
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.02em;
-  color: var(--color-text-primary);
-  margin-bottom: 8px;
 
-  @media (max-width: 768px) {
-    font-size: 24px;
+  @media (width <= 768px) {
     margin-bottom: 6px;
+    font-size: 24px;
   }
 }
 
 .tagline {
+  color: var(--color-text-secondary);
   font-family: var(--font-sans);
   font-size: 16px;
   font-weight: 500;
-  color: var(--color-text-secondary);
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     font-size: 14px;
   }
 }

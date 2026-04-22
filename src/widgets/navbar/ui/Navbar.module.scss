@@ -1,22 +1,22 @@
 .header {
   position: sticky;
   top: 0;
-  left: 0;
   right: 0;
+  left: 0;
   z-index: 50;
   background: white;
   border-bottom: 1px solid var(--color-border);
 }
 
 .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   max-width: 1280px;
   margin: 0 auto;
   padding: 16px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     padding: 14px 20px;
   }
 }
@@ -25,22 +25,22 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  text-decoration: none;
   color: var(--color-text-primary);
   font-family: var(--font-sans);
   font-size: 18px;
   font-weight: 600;
   letter-spacing: -0.02em;
+  text-decoration: none;
 }
 
 .logoIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 36px;
   height: 36px;
-  background: var(--color-primary);
   border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: var(--color-primary);
   color: white;
   flex-shrink: 0;
 }
@@ -50,16 +50,16 @@
   align-items: center;
   gap: 32px;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     display: none;
   }
 }
 
 .navLink {
-  text-decoration: none;
   color: var(--color-text-secondary);
   font-family: var(--font-sans);
   font-size: 14px;
+  text-decoration: none;
   transition: color 0.15s;
 
   &:hover {
@@ -72,37 +72,36 @@
   align-items: center;
   gap: 12px;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     display: none;
   }
 }
 
-
 .burger {
   display: none;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  padding: 4px;
   border: none;
   background: none;
-  cursor: pointer;
   color: var(--color-text-primary);
-  padding: 4px;
+  cursor: pointer;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     display: flex;
   }
 }
 
 .mobileMenu {
-  background: white;
-  border-top: 1px solid var(--color-border);
-  padding: 16px 20px 20px;
   display: flex;
   flex-direction: column;
   gap: 4px;
+  padding: 16px 20px 20px;
+  background: white;
   animation: slideDown 0.15s ease-out;
+  border-top: 1px solid var(--color-border);
 
-  @media (min-width: 769px) {
+  @media (width >= 769px) {
     display: none;
   }
 }
@@ -132,5 +131,3 @@
     color: var(--color-text-primary);
   }
 }
-
-

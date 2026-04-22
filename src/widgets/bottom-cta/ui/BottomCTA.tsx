@@ -12,9 +12,13 @@ export function BottomCTA() {
         <Box className={styles.bgCircle1} />
         <Box className={styles.bgCircle2} />
 
-        <Text component="span" className={styles.badge}>🎉 Регистрация бесплатна</Text>
+        <Text component="span" className={styles.badge}>
+          🎉 Регистрация бесплатна
+        </Text>
 
-        <Title order={2} className={styles.title}>Начните говорить сегодня</Title>
+        <Title order={2} className={styles.title}>
+          Начните говорить сегодня
+        </Title>
         <Text component="p" className={styles.subtitle}>
           Присоединитесь к 50 000+ пользователей, которые уже улучшают свои языки через живое
           общение.

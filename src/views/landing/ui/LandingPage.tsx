@@ -7,10 +7,12 @@ import { HowItWorks } from '@widgets/how-it-works/ui/HowItWorks';
 import { SocialProof } from '@widgets/social-proof/ui/SocialProof';
 import { BottomCTA } from '@widgets/bottom-cta/ui/BottomCTA';
 import { Footer } from '@widgets/footer/ui/Footer';
-import { ScrollToTop } from '@widgets/scroll-to-top/ui/ScrollToTop';
+import { ScrollToTopButton } from '@widgets/scroll-to-top/ui/ScrollToTopButton';
 import styles from './LandingPage.module.scss';
 
 export function LandingPage() {
+  const a: number = '2';
+  console.log(a);
   return (
     <Box className={styles.page}>
       <Navbar />
@@ -23,7 +25,7 @@ export function LandingPage() {
         <BottomCTA />
       </Box>
       <Footer />
-      <ScrollToTop />
+      <ScrollToTopButton />
     </Box>
   );
 }

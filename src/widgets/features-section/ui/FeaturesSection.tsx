@@ -7,8 +7,12 @@ export function FeaturesSection() {
     <Box component="section" id="features" className={styles.section}>
       <Box className={styles.inner}>
         <Box className={styles.header}>
-          <Text component="span" className={styles.tag}>Возможности</Text>
-          <Title order={2} className={styles.title}>Всё для успешной практики</Title>
+          <Text component="span" className={styles.tag}>
+            Возможности
+          </Text>
+          <Title order={2} className={styles.title}>
+            Всё для успешной практики
+          </Title>
           <Text component="p" className={styles.subtitle}>
             Language exchange собрал всё необходимое в одном продукте — без лишней сложности.
           </Text>
@@ -23,8 +27,12 @@ export function FeaturesSection() {
               >
                 {f.icon}
               </Box>
-              <Title order={3} className={styles.cardTitle}>{f.title}</Title>
-              <Text component="p" className={styles.cardDesc}>{f.description}</Text>
+              <Title order={3} className={styles.cardTitle}>
+                {f.title}
+              </Title>
+              <Text component="p" className={styles.cardDesc}>
+                {f.description}
+              </Text>
             </Box>
           ))}
         </Box>

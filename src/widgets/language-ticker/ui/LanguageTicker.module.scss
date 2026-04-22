@@ -1,14 +1,14 @@
 .wrapper {
-  background: var(--color-primary);
   padding: 14px 0;
   overflow: hidden;
+  background: var(--color-primary);
 }
 
 .track {
   display: flex;
   gap: 32px;
-  white-space: nowrap;
   width: max-content;
+  white-space: nowrap;
   animation: scroll 24s linear infinite;
 }
 

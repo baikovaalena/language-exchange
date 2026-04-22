@@ -3,6 +3,7 @@ import { inter } from '@/shared/fonts';
 import '@mantine/core/styles.css';
 import '@mantine/notifications/styles.css';
 import './globals.css';
+import { Providers } from './providers';
 
 export default function RootLayout({
   children,
@@ -15,7 +16,9 @@ export default function RootLayout({
         <ColorSchemeScript />
       </head>
       <body>
-        <MantineProvider>{children}</MantineProvider>
+        <MantineProvider>
+          <Providers>{children}</Providers>
+        </MantineProvider>
       </body>
     </html>
   );
