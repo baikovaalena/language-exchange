@@ -1,0 +1,31 @@
+.wrapper {
+  background: var(--color-primary);
+  padding: 14px 0;
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  gap: 32px;
+  white-space: nowrap;
+  width: max-content;
+  animation: scroll 24s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.item {
+  color: rgb(255 255 255 / 80%);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}

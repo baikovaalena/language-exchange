@@ -1,51 +1,90 @@
-import { Group, Stack } from '@mantine/core';
-import people from '@shared/images/people.png';
-import people1 from '@shared/images/people1.png';
-import people2 from '@shared/images/people2.png';
-import people3 from '@shared/images/people3.png';
-import people4 from '@shared/images/people4.png';
-import people5 from '@shared/images/people5.png';
-import Image from 'next/image';
+import Link from 'next/link';
+import { IconArrowRight, IconStarFilled } from '@tabler/icons-react';
+import { Box, Title, Text } from '@mantine/core';
+import HERO_IMG from '@/shared/images/people.webp';
+import AVATAR1 from '@/shared/images/avatar-1.webp';
+import AVATAR2 from '@/shared/images/avatar-2.webp';
+import STUDY_IMG from '@/shared/images/study.webp';
 import styles from './Hero.module.scss';
+import Image from 'next/image';
 
 export function Hero() {
   return (
-    <section className={styles.section}>
-      <div className={styles.heroLayout}>
-        <div className={styles.imagesLeft}>
-          <Image src={people1} alt="Speaker" className={`${styles.avatar} ${styles.avatarLg}`} />
-          <Image src={people2} alt="Speaker" className={`${styles.avatar} ${styles.avatarSm}`} />
-          <Image src={people3} alt="Speaker" className={`${styles.avatar} ${styles.avatarMd}`} />
-        </div>
+    <Box component="section" className={styles.section}>
+      <Box className={styles.bgGradient} />
+      <Box className={styles.bgCircle1} />
+      <Box className={styles.bgCircle2} />
 
-        <Stack align="center" gap={0} className={styles.content}>
-          <span className={styles.tag}>Language practice through conversation</span>
+      <Box className={styles.inner}>
+        <Box className={styles.left}>
+          <Box className={styles.badge}>
+            <Box component="span" className={styles.badgeDot} />
+            <Text component="span">Более 50 000 пользователей по всему миру</Text>
+          </Box>
 
-          <h1 className={styles.headline}>
-            Speak more.
-            <br />
-            <span className={styles.headlineAccent}>Fear less.</span>
-          </h1>
+          <Title order={1} className={styles.headline}>
+            Найди партнёра для{' '}
+            <Box component="span" className={styles.headlineAccent}>
+              языкового обмена
+              <Box component="span" className={styles.headlineUnderline} />
+            </Box>
+          </Title>
 
-          <p className={styles.subtext}>
-            Connect with native speakers worldwide and build real fluency through conversation.
-          </p>
-          <Group gap={24} align="center">
-            <a href="#" className={styles.ctaPrimary}>
-              Get Started
-            </a>
-            <a href="#" className={styles.ctaSecondary}>
-              Log in
-            </a>
-          </Group>
-        </Stack>
+          <Text component="p" className={styles.subtext}>
+            Общайся с носителями языка, практикуй разговорную речь и открывай новые культуры — всё в
+            одном месте.
+          </Text>
 
-        <div className={styles.imagesRight}>
-          <Image src={people4} alt="Speaker" className={`${styles.avatar} ${styles.avatarMd}`} />
-          <Image src={people5} alt="Speaker" className={`${styles.avatar} ${styles.avatarLg}`} />
-          <Image src={people} alt="Speaker" className={`${styles.avatar} ${styles.avatarSm}`} />
-        </div>
-      </div>
-    </section>
+          <Box className={styles.ctaRow}>
+            <Link href="/registration" className={styles.ctaPrimary}>
+              Начать бесплатно <IconArrowRight size={20} />
+            </Link>
+          </Box>
+
+          <Box className={styles.socialProof}>
+            <Box className={styles.avatarStack}>
+              {[AVATAR1, AVATAR2, HERO_IMG, STUDY_IMG].map((src, i) => (
+                <Image key={i} src={src} alt="" className={styles.stackAvatar} />
+              ))}
+            </Box>
+            <Box>
+              <Box className={styles.stars}>
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <IconStarFilled key={i} size={13} className={styles.starIcon} />
+                ))}
+              </Box>
+              <Text component="p" className={styles.reviewText}>
+                4.9 · более 12 000 отзывов
+              </Text>
+            </Box>
+          </Box>
+        </Box>
+
+        <Box className={styles.right}>
+          <Box className={styles.imageCard}>
+            <Image src={HERO_IMG} alt="Language exchange" className={styles.heroImage} />
+            <Box className={styles.imageOverlay} />
+          </Box>
+
+          <Box className={`${styles.floatingCard} ${styles.floatingCardBottom}`}>
+            <Image src={AVATAR1} alt="" className={styles.floatingAvatar} />
+            <Box>
+              <Text component="p" className={styles.floatingName}>
+                Kenji Tanaka
+              </Text>
+              <Text component="p" className={styles.floatingMeta}>
+                🇯🇵 Japanese · Native
+              </Text>
+              <Box className={styles.floatingStars}>
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <IconStarFilled key={i} size={11} className={styles.starIcon} />
+                ))}
+              </Box>
+            </Box>
+            <Box component="span" className={styles.onlineDot} />
+          </Box>
+        </Box>
+      </Box>
+    </Box>
   );
 }

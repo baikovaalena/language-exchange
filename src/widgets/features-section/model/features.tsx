@@ -1,29 +1,45 @@
-import { IconArrowsLeftRight, IconChartBar, IconMessageCircle } from '@tabler/icons-react';
+import { IconWorld, IconMessage, IconShieldCheck, IconBolt } from '@tabler/icons-react';
 import { ReactNode } from 'react';
 
 export interface Feature {
   icon: ReactNode;
-  label: string;
+  title: string;
   description: string;
+  color: string;
+  bg: string;
 }
 
 export const features: Feature[] = [
   {
-    icon: <IconMessageCircle size={18} stroke={1.5} />,
-    label: 'Speak with natives',
+    icon: <IconWorld size={24} stroke={1.5} />,
+    title: 'Партнёры со всего мира',
     description:
-      'Have real conversations with fluent speakers who help you sound natural from day one.',
+      'Более 120 стран, носители языка и энтузиасты — найдите идеального собеседника за секунды.',
+    color: 'var(--color-primary)',
+    bg: 'var(--color-primary-light)',
   },
   {
-    icon: <IconArrowsLeftRight size={18} stroke={1.5} />,
-    label: 'Language exchange',
+    icon: <IconMessage size={24} stroke={1.5} />,
+    title: 'Чат в реальном времени',
     description:
-      'Trade languages with a partner — you teach yours, they teach theirs. Mutual growth.',
+      'Встроенный мессенджер с историей и уведомлениями — общайтесь без лишних приложений.',
+    color: 'var(--color-purple)',
+    bg: 'var(--color-purple-light)',
   },
   {
-    icon: <IconChartBar size={18} stroke={1.5} />,
-    label: 'Track your growth',
+    icon: <IconShieldCheck size={24} stroke={1.5} />,
+    title: 'Безопасная среда',
     description:
-      'See your conversation hours, vocabulary, and confidence build over time with quiet precision.',
+      'Верификация профилей, система отзывов и рейтингов гарантируют честное сообщество.',
+    color: 'var(--color-success)',
+    bg: 'var(--color-success-light)',
+  },
+  {
+    icon: <IconBolt size={24} stroke={1.5} />,
+    title: 'Умный подбор',
+    description:
+      'Фильтры по языку, уровню, интересам и часовому поясу — чтобы вы совпали с партнёром.',
+    color: 'var(--color-warning)',
+    bg: 'var(--color-amber-light)',
   },
 ];
