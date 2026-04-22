@@ -6,6 +6,7 @@ import { ActionIcon, Anchor, Button, Divider, Stack } from '@mantine/core';
 import { IconLanguage, IconMenu2, IconX } from '@tabler/icons-react';
 import styles from './Navbar.module.scss';
 import { NAV_LINKS } from '../model/links';
+import { scrollToTop } from '@shared/lib/scroll/scroll';
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -13,7 +14,13 @@ export function Navbar() {
   return (
     <header className={styles.header}>
       <div className={styles.inner}>
-        <Link href="/" className={styles.logo}>
+        <Link
+          href="/"
+          className={styles.logo}
+          onClick={() => {
+            scrollToTop();
+          }}
+        >
           <div className={styles.logoIcon}>
             <IconLanguage size={20} stroke={1.5} />
           </div>

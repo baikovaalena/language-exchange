@@ -7,6 +7,7 @@ import { HowItWorks } from '@widgets/how-it-works/ui/HowItWorks';
 import { SocialProof } from '@widgets/social-proof/ui/SocialProof';
 import { BottomCTA } from '@widgets/bottom-cta/ui/BottomCTA';
 import { Footer } from '@widgets/footer/ui/Footer';
+import { ScrollToTop } from '@widgets/scroll-to-top/ui/ScrollToTop';
 import styles from './LandingPage.module.scss';
 
 export function LandingPage() {
@@ -22,6 +23,7 @@ export function LandingPage() {
         <BottomCTA />
       </Box>
       <Footer />
+      <ScrollToTop />
     </Box>
   );
 }

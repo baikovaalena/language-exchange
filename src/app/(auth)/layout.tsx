@@ -1,13 +1,27 @@
+'use client';
+import { IconLanguage } from '@tabler/icons-react';
+import { Text, Title } from '@mantine/core';
 import styles from './layout.module.scss';
-import { Text } from '@mantine/core';
+import { useRouter } from 'next/navigation';
 
 export default function AuthLayout({ children }: { children: React.ReactNode }) {
+  const router = useRouter();
+
   return (
     <div className={styles.page}>
-      <div className={styles.left}>
-        <Text className={styles.title}>Language Exchange L</Text>
+      <div className={styles.inner}>
+        <div className={styles.header}>
+          <div className={styles.logo}>
+            <IconLanguage size={40} stroke={2.2} onClick={() => router.push('/')} />
+          </div>
+          <Title order={1} className={styles.brand}>
+            Language exchange
+          </Title>
+          <Text className={styles.tagline}>Общайся. Учись. Практикуй.</Text>
+        </div>
+
+        <div className={styles.content}>{children}</div>
       </div>
-      <div className={styles.right}>{children}</div>
     </div>
   );
 }
