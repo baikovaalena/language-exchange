@@ -10,7 +10,7 @@ import { Footer } from '@widgets/footer/ui/Footer';
 import { ScrollToTopButton } from '@widgets/scroll-to-top/ui/ScrollToTopButton';
 import styles from './LandingPage.module.scss';
 
-export function LandingPage() {
+export const LandingPage = () => {
   return (
     <Box className={styles.page}>
       <Navbar />
@@ -26,4 +26,4 @@ export function LandingPage() {
       <ScrollToTopButton />
     </Box>
   );
-}
+};

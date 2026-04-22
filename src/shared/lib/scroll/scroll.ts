@@ -2,12 +2,12 @@
 
 import { useEffect, useState } from 'react';
 
-export function scrollToTop(behavior: ScrollBehavior = 'smooth') {
+export const scrollToTop = (behavior: ScrollBehavior = 'smooth') => {
   if (typeof window === 'undefined') return;
   window.scrollTo({ top: 0, behavior });
-}
+};
 
-export function useIsScrolled(threshold = 0) {
+export const useIsScrolled = (threshold = 0) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -18,4 +18,4 @@ export function useIsScrolled(threshold = 0) {
   }, [threshold]);
 
   return scrolled;
-}
+};

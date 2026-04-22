@@ -5,7 +5,7 @@ import styles from './BottomCTA.module.scss';
 
 const perks = ['Бесплатно навсегда', 'Без кредитной карты', '120+ языков'];
 
-export function BottomCTA() {
+export const BottomCTA = () => {
   return (
     <Box component="section" className={styles.section}>
       <Box className={styles.card}>
@@ -44,4 +44,4 @@ export function BottomCTA() {
       </Box>
     </Box>
   );
-}
+};

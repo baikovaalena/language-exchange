@@ -2,7 +2,7 @@ import { Box, Text } from '@mantine/core';
 import styles from './LanguageTicker.module.scss';
 import { languages } from '../model/languages';
 
-export function LanguageTicker() {
+export const LanguageTicker = () => {
   const doubled = [...languages, ...languages];
 
   return (
@@ -16,4 +16,4 @@ export function LanguageTicker() {
       </Box>
     </Box>
   );
-}
+};

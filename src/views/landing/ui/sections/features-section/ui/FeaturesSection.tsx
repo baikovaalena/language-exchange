@@ -2,7 +2,7 @@ import { Box, Title, Text } from '@mantine/core';
 import { features } from '../model/features';
 import styles from './FeaturesSection.module.scss';
 
-export function FeaturesSection() {
+export const FeaturesSection = () => {
   return (
     <Box component="section" id="features" className={styles.section}>
       <Box className={styles.inner}>
@@ -39,4 +39,4 @@ export function FeaturesSection() {
       </Box>
     </Box>
   );
-}
+};

@@ -7,7 +7,7 @@ import styles from './ScrollToTopButton.module.scss';
 
 const SCROLL_THRESHOLD = 400;
 
-export function ScrollToTopButton() {
+export const ScrollToTopButton = () => {
   const visible = useIsScrolled(SCROLL_THRESHOLD);
 
   return (
@@ -23,4 +23,4 @@ export function ScrollToTopButton() {
       <IconArrowUp size={22} stroke={2} />
     </ActionIcon>
   );
-}
+};

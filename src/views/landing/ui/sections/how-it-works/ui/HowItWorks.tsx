@@ -6,7 +6,7 @@ import STUDY_IMG from '@/shared/images/study.webp';
 import { steps } from '../model/steps';
 import styles from './HowItWorks.module.scss';
 
-export function HowItWorks() {
+export const HowItWorks = () => {
   return (
     <Box component="section" id="how" className={styles.section}>
       <Box className={styles.inner}>
@@ -67,4 +67,4 @@ export function HowItWorks() {
       </Box>
     </Box>
   );
-}
+};

@@ -4,7 +4,7 @@ import { Box, Title, Text } from '@mantine/core';
 import { testimonials } from '../model/testimonials';
 import styles from './SocialProof.module.scss';
 
-export function SocialProof() {
+export const SocialProof = () => {
   return (
     <Box component="section" id="testimonials" className={styles.section}>
       <Box className={styles.header}>
@@ -46,4 +46,4 @@ export function SocialProof() {
       </Box>
     </Box>
   );
-}
+};

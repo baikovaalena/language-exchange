@@ -8,7 +8,7 @@ import STUDY_IMG from '@/shared/images/study.webp';
 import styles from './Hero.module.scss';
 import Image from 'next/image';
 
-export function Hero() {
+export const Hero = () => {
   return (
     <Box component="section" className={styles.section}>
       <Box className={styles.bgGradient} />
@@ -87,4 +87,4 @@ export function Hero() {
       </Box>
     </Box>
   );
-}
+};

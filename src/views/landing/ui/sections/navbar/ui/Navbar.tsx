@@ -8,7 +8,7 @@ import styles from './Navbar.module.scss';
 import { NAV_LINKS } from '../model/links';
 import { scrollToTop } from '@shared/lib/scroll/scroll';
 
-export function Navbar() {
+export const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
@@ -84,4 +84,4 @@ export function Navbar() {
       )}
     </header>
   );
-}
+};

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Button, PasswordInput, Text, TextInput, Title } from '@mantine/core';
 import styles from '../../AuthPage.module.scss';
 
-export function LoginPage() {
+export const LoginPage = () => {
   return (
     <div className={styles.card}>
       <Title order={2} className={styles.title}>
@@ -32,4 +32,4 @@ export function LoginPage() {
       </div>
     </div>
   );
-}
+};

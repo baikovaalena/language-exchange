@@ -3,7 +3,7 @@ import styles from './Footer.module.scss';
 
 const links = ['Конфиденциальность', 'Условия', 'Поддержка'];
 
-export function Footer() {
+export const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.inner}>
@@ -26,4 +26,4 @@ export function Footer() {
       </div>
     </footer>
   );
-}
+};
