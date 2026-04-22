@@ -1,4 +1,4 @@
-export interface Step {
+interface Step {
   num: string;
   title: string;
   desc: string;

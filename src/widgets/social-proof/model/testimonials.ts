@@ -3,7 +3,7 @@ import AVATAR2 from '@/shared/images/avatar-2.webp';
 import AVATAR3 from '@/shared/images/study.webp';
 import { StaticImageData } from 'next/image';
 
-export interface Testimonial {
+interface Testimonial {
   avatar: StaticImageData;
   name: string;
   country: string;
