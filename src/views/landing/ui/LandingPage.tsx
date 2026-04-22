@@ -11,8 +11,6 @@ import { ScrollToTopButton } from '@widgets/scroll-to-top/ui/ScrollToTopButton';
 import styles from './LandingPage.module.scss';
 
 export function LandingPage() {
-  const a: number = '2';
-  console.log(a);
   return (
     <Box className={styles.page}>
       <Navbar />
