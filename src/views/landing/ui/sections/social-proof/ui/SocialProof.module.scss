@@ -24,24 +24,16 @@
   border-radius: 100px;
   background: var(--color-primary-light);
   color: var(--color-primary);
-  font-family: var(--font-sans);
-  font-size: 13px;
-  font-weight: 500;
 }
 
 .title {
   margin-bottom: 12px;
   color: var(--color-text-primary);
-  font-family: var(--font-sans);
-  font-size: clamp(1.6rem, 4vw, 2.4rem);
-  font-weight: 700;
-  letter-spacing: -0.025em;
+  font-size: var(--fs-section);
 }
 
 .subtitle {
   color: var(--color-text-secondary);
-  font-family: var(--font-sans);
-  font-size: 16px;
 }
 
 .grid {
@@ -90,9 +82,6 @@
   flex: 1;
   margin: 0;
   color: var(--color-text-primary);
-  font-family: var(--font-sans);
-  font-size: 14px;
-  line-height: 1.75;
 }
 
 .author {
@@ -114,14 +103,9 @@
 .authorName {
   margin: 0;
   color: var(--color-text-primary);
-  font-family: var(--font-sans);
-  font-size: 14px;
-  font-weight: 600;
 }
 
 .authorCountry {
   margin: 0;
   color: var(--color-text-secondary);
-  font-family: var(--font-sans);
-  font-size: 12px;
 }

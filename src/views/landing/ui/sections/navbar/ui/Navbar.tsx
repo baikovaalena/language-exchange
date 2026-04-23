@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { ActionIcon, Anchor, Button, Divider, Stack } from '@mantine/core';
+import { ActionIcon, Anchor, Box, Button, Divider, Stack } from '@mantine/core';
 import { IconLanguage, IconMenu2, IconX } from '@tabler/icons-react';
 import { scrollToTop } from '@shared/lib/scroll';
 import styles from './Navbar.module.scss';
@@ -12,37 +12,38 @@ export const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className={styles.header}>
-      <div className={styles.inner}>
+    <Box component="header" className={styles.header}>
+      <Box className={styles.inner}>
         <Link
           href="/"
           className={styles.logo}
+          style={{ letterSpacing: '-0.025em' }}
           onClick={() => {
             scrollToTop();
           }}
         >
-          <div className={styles.logoIcon}>
+          <Box className={styles.logoIcon}>
             <IconLanguage size={20} stroke={1.5} />
-          </div>
+          </Box>
           Language exchange
         </Link>
 
-        <nav className={styles.nav}>
+        <Box component="nav" className={styles.nav}>
           {navLinks.map((link) => (
-            <Anchor key={link.id} href={link.href} className={styles.navLink} underline="never">
+            <Anchor key={link.id} href={link.href} size="sm" className={styles.navLink} underline="never">
               {link.label}
             </Anchor>
           ))}
-        </nav>
+        </Box>
 
-        <div className={styles.actions}>
+        <Box className={styles.actions}>
           <Button component={Link} href="/login" variant="subtle" color="gray" size="sm">
             Войти
           </Button>
           <Button component={Link} href="/registration" size="sm" color="#2563eb">
             Начать бесплатно
           </Button>
-        </div>
+        </Box>
 
         <ActionIcon
           className={styles.burger}
@@ -54,15 +55,16 @@ export const Navbar = () => {
         >
           {mobileOpen ? <IconX size={24} /> : <IconMenu2 size={24} />}
         </ActionIcon>
-      </div>
+      </Box>
 
       {mobileOpen && (
-        <div className={styles.mobileMenu}>
+        <Box className={styles.mobileMenu}>
           <Stack gap={4}>
             {navLinks.map((link) => (
               <Anchor
                 key={link.id}
                 href={link.href}
+                size="md"
                 className={styles.mobileLink}
                 underline="never"
                 onClick={() => setMobileOpen(false)}
@@ -80,8 +82,8 @@ export const Navbar = () => {
               Начать бесплатно
             </Button>
           </Stack>
-        </div>
+        </Box>
       )}
-    </header>
+    </Box>
   );
 };

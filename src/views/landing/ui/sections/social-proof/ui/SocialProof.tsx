@@ -8,13 +8,13 @@ export const SocialProof = () => {
   return (
     <Box component="section" id="testimonials" className={styles.section}>
       <Box className={styles.header}>
-        <Text component="span" className={styles.tag}>
+        <Text component="span" size="sm" fw={500} className={styles.tag}>
           Отзывы
         </Text>
-        <Title order={2} className={styles.title}>
+        <Title order={2} lts="-0.025em" className={styles.title}>
           Что говорят пользователи
         </Title>
-        <Text component="p" className={styles.subtitle}>
+        <Text component="p" size="lg" className={styles.subtitle}>
           Реальные истории от реальных людей
         </Text>
       </Box>
@@ -27,16 +27,16 @@ export const SocialProof = () => {
                 <IconStarFilled key={i} size={14} className={styles.starIcon} />
               ))}
             </Box>
-            <Text component="p" className={styles.text}>
+            <Text component="p" size="md" lh="xl" className={styles.text}>
               &ldquo;{t.text}&rdquo;
             </Text>
             <Box className={styles.author}>
               <Image src={t.avatar} alt={t.name} className={styles.avatar} />
               <Box>
-                <Text component="p" className={styles.authorName}>
+                <Text component="p" size="sm" fw={600} className={styles.authorName}>
                   {t.name}
                 </Text>
-                <Text component="p" className={styles.authorCountry}>
+                <Text component="p" size="xs" className={styles.authorCountry}>
                   {t.country}
                 </Text>
               </Box>

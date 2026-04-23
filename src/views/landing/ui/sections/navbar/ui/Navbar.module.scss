@@ -26,10 +26,8 @@
   align-items: center;
   gap: 10px;
   color: var(--color-text-primary);
-  font-family: var(--font-sans);
-  font-size: 18px;
+  font-size: var(--fs-xl);
   font-weight: 600;
-  letter-spacing: -0.02em;
   text-decoration: none;
 }
 
@@ -57,8 +55,6 @@
 
 .navLink {
   color: var(--color-text-secondary);
-  font-family: var(--font-sans);
-  font-size: 14px;
   text-decoration: none;
   transition: color 0.15s;
 
@@ -122,8 +118,6 @@
   display: block;
   padding: 10px 4px;
   color: var(--color-text-secondary);
-  font-family: var(--font-sans);
-  font-size: 15px;
   text-decoration: none;
   transition: color 0.15s;
 

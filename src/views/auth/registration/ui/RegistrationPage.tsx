@@ -1,17 +1,17 @@
 'use client';
 
 import Link from 'next/link';
-import { Button, PasswordInput, Text, TextInput, Title } from '@mantine/core';
+import { Button, Paper, PasswordInput, Stack, Text, TextInput, Title } from '@mantine/core';
 import styles from '../../AuthPage.module.scss';
 
 export const RegistrationPage = () => {
   return (
-    <div className={styles.card}>
-      <Title order={2} className={styles.title}>
+    <Paper className={styles.card}>
+      <Title order={2} fw={600} lh="xs" lts="-0.01em" className={styles.title}>
         Создайте аккаунт
       </Title>
 
-      <form className={styles.form}>
+      <Stack component="form" className={styles.form} gap="md">
         <TextInput label="Имя и фамилия" placeholder="Иван Иванов" required />
         <TextInput type="email" label="Электронная почта" placeholder="you@example.com" required />
         <PasswordInput label="Пароль" placeholder="••••••••" required />
@@ -19,16 +19,16 @@ export const RegistrationPage = () => {
         <Button type="submit" size="md" fullWidth className={styles.submit}>
           Создать аккаунт
         </Button>
-      </form>
+      </Stack>
 
-      <div className={styles.footer}>
-        <Text component="span" size="sm" c="dimmed">
+      <Stack className={styles.footer} gap={0} align="center" mt="xl">
+        <Text size="sm" c="dimmed">
           Уже есть аккаунт?{' '}
           <Link href="/login" className={styles.link}>
             Войти
           </Link>
         </Text>
-      </div>
-    </div>
+      </Stack>
+    </Paper>
   );
 };

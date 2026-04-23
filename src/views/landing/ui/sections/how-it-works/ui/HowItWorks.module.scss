@@ -39,26 +39,17 @@
   border-radius: 100px;
   background: white;
   color: var(--color-primary);
-  font-family: var(--font-sans);
-  font-size: 13px;
-  font-weight: 500;
 }
 
 .title {
   margin-bottom: 16px;
   color: var(--color-text-primary);
-  font-family: var(--font-sans);
-  font-size: clamp(1.6rem, 4vw, 2.4rem);
-  font-weight: 700;
-  letter-spacing: -0.025em;
+  font-size: var(--fs-section);
 }
 
 .subtitle {
   margin-bottom: 40px;
   color: var(--color-text-secondary);
-  font-family: var(--font-sans);
-  font-size: 16px;
-  line-height: 1.7;
 }
 
 .steps {
@@ -90,8 +81,7 @@
   border-radius: 14px;
   background: var(--color-primary);
   color: white;
-  font-family: var(--font-sans);
-  font-size: 15px;
+  font-size: var(--fs-base);
   font-weight: 700;
   flex-shrink: 0;
 }
@@ -112,17 +102,12 @@
 .stepTitle {
   margin-bottom: 4px;
   color: var(--color-text-primary);
-  font-family: var(--font-sans);
-  font-size: 15px;
-  font-weight: 600;
+  font-size: var(--fs-base);
 }
 
 .stepDesc {
   margin: 0;
   color: var(--color-text-secondary);
-  font-family: var(--font-sans);
-  font-size: 13px;
-  line-height: 1.65;
 }
 
 .cta {
@@ -133,8 +118,7 @@
   border-radius: 12px;
   background: var(--color-primary);
   color: white;
-  font-family: var(--font-sans);
-  font-size: 15px;
+  font-size: var(--fs-base);
   font-weight: 600;
   text-decoration: none;
   transition:
@@ -205,14 +189,9 @@
 .quoteText {
   margin: 0 0 8px;
   color: var(--color-text-primary);
-  font-family: var(--font-sans);
-  font-size: 13px;
-  line-height: 1.6;
 }
 
 .quoteAuthor {
   margin: 0;
   color: var(--color-text-secondary);
-  font-family: var(--font-sans);
-  font-size: 11px;
 }

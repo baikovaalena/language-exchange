@@ -9,7 +9,7 @@ export const LanguageTicker = () => {
     <Box className={styles.wrapper}>
       <Box className={styles.track}>
         {doubled.map((lang, i) => (
-          <Text component="span" key={i} className={styles.item}>
+          <Text component="span" size="sm" fw={500} lts="0.01em" key={i} className={styles.item}>
             {lang}
           </Text>
         ))}

@@ -19,10 +19,10 @@ export const Hero = () => {
         <Box className={styles.left}>
           <Box className={styles.badge}>
             <Box component="span" className={styles.badgeDot} />
-            <Text component="span">Более 50 000 пользователей по всему миру</Text>
+            <Text component="span" size="sm">Более 50 000 пользователей по всему миру</Text>
           </Box>
 
-          <Title order={1} className={styles.headline}>
+          <Title order={1} lh="xs" lts="-0.025em" className={styles.headline}>
             Найди партнёра для{' '}
             <Box component="span" className={styles.headlineAccent}>
               языкового обмена
@@ -30,7 +30,7 @@ export const Hero = () => {
             </Box>
           </Title>
 
-          <Text component="p" className={styles.subtext}>
+          <Text component="p" lh="lg" className={styles.subtext}>
             Общайся с носителями языка, практикуй разговорную речь и открывай новые культуры — всё в
             одном месте.
           </Text>
@@ -53,7 +53,7 @@ export const Hero = () => {
                   <IconStarFilled key={i} size={13} className={styles.starIcon} />
                 ))}
               </Box>
-              <Text component="p" className={styles.reviewText}>
+              <Text component="p" size="xs" className={styles.reviewText}>
                 4.9 · более 12 000 отзывов
               </Text>
             </Box>
@@ -69,10 +69,10 @@ export const Hero = () => {
           <Box className={`${styles.floatingCard} ${styles.floatingCardBottom}`}>
             <Image src={AVATAR1} alt="" className={styles.floatingAvatar} />
             <Box>
-              <Text component="p" className={styles.floatingName}>
+              <Text component="p" size="sm" fw={600} className={styles.floatingName}>
                 Kenji Tanaka
               </Text>
-              <Text component="p" className={styles.floatingMeta}>
+              <Text component="p" fz={11} lh="sm" className={styles.floatingMeta}>
                 🇯🇵 Japanese · Native
               </Text>
               <Box className={styles.floatingStars}>

@@ -41,17 +41,11 @@
 
 .logoText {
   color: var(--color-text-primary);
-  font-family: var(--font-sans);
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: -0.02em;
 }
 
 .copyright {
   margin: 0;
   color: var(--color-text-secondary);
-  font-family: var(--font-sans);
-  font-size: 13px;
 }
 
 .links {
@@ -61,8 +55,6 @@
 
 .link {
   color: var(--color-text-secondary);
-  font-family: var(--font-sans);
-  font-size: 13px;
   text-decoration: none;
   transition: color 0.15s;
 

@@ -11,14 +11,14 @@ export const BottomCTA = () => {
         <Box className={styles.bgCircle1} />
         <Box className={styles.bgCircle2} />
 
-        <Text component="span" className={styles.badge}>
+        <Text component="span" size="sm" className={styles.badge}>
           🎉 Регистрация бесплатна
         </Text>
 
-        <Title order={2} className={styles.title}>
+        <Title order={2} lts="-0.025em" className={styles.title}>
           Начните говорить сегодня
         </Title>
-        <Text component="p" className={styles.subtitle}>
+        <Text component="p" size="lg" lh="lg" className={styles.subtitle}>
           Присоединитесь к 50 000+ пользователей, которые уже улучшают свои языки через живое
           общение.
         </Text>
@@ -36,7 +36,7 @@ export const BottomCTA = () => {
           {perks.map(({ id, label }) => (
             <Box key={id} className={styles.perk}>
               <IconCheck size={16} className={styles.checkIcon} />
-              <Text component="span">{label}</Text>
+              <Text component="span" size="sm">{label}</Text>
             </Box>
           ))}
         </Box>

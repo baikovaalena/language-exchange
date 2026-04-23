@@ -7,13 +7,13 @@ export const FeaturesSection = () => {
     <Box component="section" id="features" className={styles.section}>
       <Box className={styles.inner}>
         <Box className={styles.header}>
-          <Text component="span" className={styles.tag}>
+          <Text component="span" size="sm" fw={500} className={styles.tag}>
             Возможности
           </Text>
-          <Title order={2} className={styles.title}>
+          <Title order={2} lts="-0.025em" className={styles.title}>
             Всё для успешной практики
           </Title>
-          <Text component="p" className={styles.subtitle}>
+          <Text component="p" size="lg" lh="md" className={styles.subtitle}>
             Language exchange собрал всё необходимое в одном продукте — без лишней сложности.
           </Text>
         </Box>
@@ -27,10 +27,10 @@ export const FeaturesSection = () => {
               >
                 {f.icon}
               </Box>
-              <Title order={3} className={styles.cardTitle}>
+              <Title order={3} lts="-0.01em" className={styles.cardTitle}>
                 {f.title}
               </Title>
-              <Text component="p" className={styles.cardDesc}>
+              <Text component="p" size="sm" lh="lg" className={styles.cardDesc}>
                 {f.description}
               </Text>
             </Box>
