@@ -2,6 +2,7 @@ import { IconWorld, IconMessage, IconShieldCheck, IconBolt } from '@tabler/icons
 import { ReactNode } from 'react';
 
 export interface IFeature {
+  id: string;
   icon: ReactNode;
   title: string;
   description: string;
@@ -11,6 +12,7 @@ export interface IFeature {
 
 export const features: IFeature[] = [
   {
+    id: 'global-partners',
     icon: <IconWorld size={24} stroke={1.5} />,
     title: 'Партнёры со всего мира',
     description:
@@ -19,6 +21,7 @@ export const features: IFeature[] = [
     bg: 'var(--color-primary-light)',
   },
   {
+    id: 'realtime-chat',
     icon: <IconMessage size={24} stroke={1.5} />,
     title: 'Чат в реальном времени',
     description:
@@ -27,6 +30,7 @@ export const features: IFeature[] = [
     bg: 'var(--color-purple-light)',
   },
   {
+    id: 'safe-environment',
     icon: <IconShieldCheck size={24} stroke={1.5} />,
     title: 'Безопасная среда',
     description:
@@ -35,6 +39,7 @@ export const features: IFeature[] = [
     bg: 'var(--color-success-light)',
   },
   {
+    id: 'smart-matching',
     icon: <IconBolt size={24} stroke={1.5} />,
     title: 'Умный подбор',
     description:

@@ -21,7 +21,7 @@ export const SocialProof = () => {
 
       <Box className={styles.grid}>
         {testimonials.map((t) => (
-          <Box key={t.name} className={styles.card}>
+          <Box key={t.id} className={styles.card}>
             <Box className={styles.stars}>
               {Array.from({ length: t.rating }).map((_, i) => (
                 <IconStarFilled key={i} size={14} className={styles.starIcon} />

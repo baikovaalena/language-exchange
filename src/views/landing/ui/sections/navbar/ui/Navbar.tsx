@@ -4,9 +4,9 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { ActionIcon, Anchor, Button, Divider, Stack } from '@mantine/core';
 import { IconLanguage, IconMenu2, IconX } from '@tabler/icons-react';
+import { scrollToTop } from '@shared/lib/scroll/scrollToTop';
 import styles from './Navbar.module.scss';
-import { NAV_LINKS } from '../model/links';
-import { scrollToTop } from '@shared/lib/scroll/scroll';
+import { navLinks } from '../model/links';
 
 export const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -28,9 +28,9 @@ export const Navbar = () => {
         </Link>
 
         <nav className={styles.nav}>
-          {NAV_LINKS.map(([label, href]) => (
-            <Anchor key={href} href={href} className={styles.navLink} underline="never">
-              {label}
+          {navLinks.map((link) => (
+            <Anchor key={link.id} href={link.href} className={styles.navLink} underline="never">
+              {link.label}
             </Anchor>
           ))}
         </nav>
@@ -49,7 +49,7 @@ export const Navbar = () => {
           variant="transparent"
           color="gray"
           size="lg"
-          onClick={() => setMobileOpen((v) => !v)}
+          onClick={() => setMobileOpen((prev) => !prev)}
           aria-label="Меню"
         >
           {mobileOpen ? <IconX size={24} /> : <IconMenu2 size={24} />}
@@ -59,15 +59,15 @@ export const Navbar = () => {
       {mobileOpen && (
         <div className={styles.mobileMenu}>
           <Stack gap={4}>
-            {NAV_LINKS.map(([label, href]) => (
+            {navLinks.map((link) => (
               <Anchor
-                key={href}
-                href={href}
+                key={link.id}
+                href={link.href}
                 className={styles.mobileLink}
                 underline="never"
                 onClick={() => setMobileOpen(false)}
               >
-                {label}
+                {link.label}
               </Anchor>
             ))}
           </Stack>

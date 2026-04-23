@@ -2,7 +2,8 @@
 
 import { ActionIcon } from '@mantine/core';
 import { IconArrowUp } from '@tabler/icons-react';
-import { scrollToTop, useIsScrolled } from '@shared/lib/scroll/scroll';
+import { scrollToTop } from '@shared/lib/scroll/scrollToTop';
+import { useIsScrolled } from '../model/useIsScrolled';
 import styles from './ScrollToTopButton.module.scss';
 
 const SCROLL_THRESHOLD = 400;

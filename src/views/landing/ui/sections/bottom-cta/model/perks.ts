@@ -1,9 +1,10 @@
 export interface IBottomCTAPerk {
+  id: string;
   label: string;
 }
 
 export const perks: IBottomCTAPerk[] = [
-  { label: 'Бесплатно навсегда' },
-  { label: 'Без кредитной карты' },
-  { label: '120+ языков' },
+  { id: 'free-forever', label: 'Бесплатно навсегда' },
+  { id: 'no-credit-card', label: 'Без кредитной карты' },
+  { id: 'languages-120-plus', label: '120+ языков' },
 ];

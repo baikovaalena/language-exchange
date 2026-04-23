@@ -33,8 +33,8 @@ export const BottomCTA = () => {
         </Box>
 
         <Box className={styles.perks}>
-          {perks.map(({ label }) => (
-            <Box key={label} className={styles.perk}>
+          {perks.map(({ id, label }) => (
+            <Box key={id} className={styles.perk}>
               <IconCheck size={16} className={styles.checkIcon} />
               <Text component="span">{label}</Text>
             </Box>

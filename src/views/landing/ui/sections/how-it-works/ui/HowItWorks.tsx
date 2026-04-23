@@ -23,7 +23,7 @@ export const HowItWorks = () => {
 
           <Box className={styles.steps}>
             {steps.map((s, i) => (
-              <Box key={s.num} className={styles.step}>
+              <Box key={s.id} className={styles.step}>
                 <Box className={styles.stepLeft}>
                   <Box className={styles.stepNum}>{s.num}</Box>
                   {i < steps.length - 1 && <Box className={styles.stepLine} />}

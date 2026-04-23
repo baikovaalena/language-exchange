@@ -20,7 +20,7 @@ export const FeaturesSection = () => {
 
         <Box className={styles.grid}>
           {features.map((f) => (
-            <Box key={f.title} className={styles.card}>
+            <Box key={f.id} className={styles.card}>
               <Box
                 className={styles.iconBox}
                 style={{ background: f.bg, color: f.color } as React.CSSProperties}

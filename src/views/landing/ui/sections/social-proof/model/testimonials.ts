@@ -4,6 +4,7 @@ import AVATAR3 from '@/shared/images/study.webp';
 import { StaticImageData } from 'next/image';
 
 interface ITestimonial {
+  id: string;
   avatar: StaticImageData;
   name: string;
   country: string;
@@ -13,6 +14,7 @@ interface ITestimonial {
 
 export const testimonials: ITestimonial[] = [
   {
+    id: 'kenji-tanaka',
     avatar: AVATAR1,
     name: 'Kenji Tanaka',
     country: '🇯🇵 Tokyo, Japan',
@@ -20,6 +22,7 @@ export const testimonials: ITestimonial[] = [
     text: 'За 3 месяца мой испанский вырос с нуля до разговорного уровня. Language exchange — лучшее, что со мной случалось в изучении языков.',
   },
   {
+    id: 'maria-garcia',
     avatar: AVATAR2,
     name: 'Maria Garcia',
     country: '🇪🇸 Madrid, Spain',
@@ -27,6 +30,7 @@ export const testimonials: ITestimonial[] = [
     text: 'Нашла партнёра по обмену из Франции, и теперь мы разговариваем каждую неделю. Моя уверенность выросла невероятно!',
   },
   {
+    id: 'sophie-laurent',
     avatar: AVATAR3,
     name: 'Sophie Laurent',
     country: '🇫🇷 Paris, France',
