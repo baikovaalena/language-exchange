@@ -6,8 +6,8 @@ import { FeaturesSection } from './sections/features-section/ui/FeaturesSection'
 import { HowItWorks } from './sections/how-it-works/ui/HowItWorks';
 import { SocialProof } from './sections/social-proof/ui/SocialProof';
 import { BottomCTA } from './sections/bottom-cta/ui/BottomCTA';
-import { Footer } from '@widgets/footer/ui/Footer';
-import { ScrollToTopButton } from '@widgets/scroll-to-top/ui/ScrollToTopButton';
+import { Footer } from '@widgets/footer';
+import { ScrollToTopButton } from '@widgets/scroll-to-top';
 import styles from './LandingPage.module.scss';
 
 export const LandingPage = () => {

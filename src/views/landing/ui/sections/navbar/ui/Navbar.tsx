@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { ActionIcon, Anchor, Button, Divider, Stack } from '@mantine/core';
 import { IconLanguage, IconMenu2, IconX } from '@tabler/icons-react';
-import { scrollToTop } from '@shared/lib/scroll/scrollToTop';
+import { scrollToTop } from '@shared/lib/scroll';
 import styles from './Navbar.module.scss';
 import { navLinks } from '../model/links';
 
