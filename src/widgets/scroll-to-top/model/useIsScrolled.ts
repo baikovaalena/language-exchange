@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 
-export const useIsScrolled = (threshold = 0) => {
+export const useIsScrolled = (threshold = 400) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {

@@ -19,10 +19,12 @@ export const Hero = () => {
         <Box className={styles.left}>
           <Box className={styles.badge}>
             <Box component="span" className={styles.badgeDot} />
-            <Text component="span" size="sm">Более 50 000 пользователей по всему миру</Text>
+            <Text component="span" size="sm">
+              Более 50 000 пользователей по всему миру
+            </Text>
           </Box>
 
-          <Title order={1} lh="xs" lts="-0.025em" className={styles.headline}>
+          <Title order={1} lts="-0.025em" fz="var(--fs-hero)" mb="lg">
             Найди партнёра для{' '}
             <Box component="span" className={styles.headlineAccent}>
               языкового обмена
@@ -72,7 +74,7 @@ export const Hero = () => {
               <Text component="p" size="sm" fw={600} className={styles.floatingName}>
                 Kenji Tanaka
               </Text>
-              <Text component="p" fz={11} lh="sm" className={styles.floatingMeta}>
+              <Text component="p" size="xs" lh="sm" className={styles.floatingMeta}>
                 🇯🇵 Japanese · Native
               </Text>
               <Box className={styles.floatingStars}>

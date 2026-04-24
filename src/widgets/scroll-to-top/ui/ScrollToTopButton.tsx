@@ -6,10 +6,8 @@ import { scrollToTop } from '@shared/lib/scroll/scrollToTop';
 import { useIsScrolled } from '../model/useIsScrolled';
 import styles from './ScrollToTopButton.module.scss';
 
-const SCROLL_THRESHOLD = 400;
-
 export const ScrollToTopButton = () => {
-  const visible = useIsScrolled(SCROLL_THRESHOLD);
+  const visible = useIsScrolled();
 
   return (
     <ActionIcon

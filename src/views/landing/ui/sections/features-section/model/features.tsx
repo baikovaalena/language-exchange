@@ -10,7 +10,7 @@ export interface IFeature {
   bg: string;
 }
 
-export const features: IFeature[] = [
+export const FEATURES: IFeature[] = [
   {
     id: 'global-partners',
     icon: <IconWorld size={24} stroke={1.5} />,

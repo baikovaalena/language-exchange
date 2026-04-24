@@ -3,7 +3,7 @@ import AVATAR2 from '@/shared/images/avatar-2.webp';
 import AVATAR3 from '@/shared/images/study.webp';
 import { StaticImageData } from 'next/image';
 
-interface ITestimonial {
+export interface IReview {
   id: string;
   avatar: StaticImageData;
   name: string;
@@ -12,7 +12,7 @@ interface ITestimonial {
   text: string;
 }
 
-export const testimonials: ITestimonial[] = [
+export const REVIEWS: IReview[] = [
   {
     id: 'kenji-tanaka',
     avatar: AVATAR1,

@@ -1,5 +1,5 @@
 import { Box, Title, Text } from '@mantine/core';
-import { features } from '../model/features';
+import { FEATURES } from '../model/features';
 import styles from './FeaturesSection.module.scss';
 
 export const FeaturesSection = () => {
@@ -10,7 +10,7 @@ export const FeaturesSection = () => {
           <Text component="span" size="sm" fw={500} className={styles.tag}>
             Возможности
           </Text>
-          <Title order={2} lts="-0.025em" className={styles.title}>
+          <Title order={2} lts="-0.025em" fz="var(--fs-section)" mb="md">
             Всё для успешной практики
           </Title>
           <Text component="p" size="lg" lh="md" className={styles.subtitle}>
@@ -19,7 +19,7 @@ export const FeaturesSection = () => {
         </Box>
 
         <Box className={styles.grid}>
-          {features.map((f) => (
+          {FEATURES.map((f) => (
             <Box key={f.id} className={styles.card}>
               <Box
                 className={styles.iconBox}
@@ -27,7 +27,7 @@ export const FeaturesSection = () => {
               >
                 {f.icon}
               </Box>
-              <Title order={3} lts="-0.01em" className={styles.cardTitle}>
+              <Title order={3} lts="-0.01em" fz="md">
                 {f.title}
               </Title>
               <Text component="p" size="sm" lh="lg" className={styles.cardDesc}>

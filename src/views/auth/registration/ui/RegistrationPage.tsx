@@ -7,7 +7,7 @@ import styles from '../../AuthPage.module.scss';
 export const RegistrationPage = () => {
   return (
     <Paper className={styles.card}>
-      <Title order={2} fw={600} lh="xs" lts="-0.01em" className={styles.title}>
+      <Title order={4} lts="-0.01em" ta="center" mb="lg">
         Создайте аккаунт
       </Title>
 
@@ -21,7 +21,7 @@ export const RegistrationPage = () => {
         </Button>
       </Stack>
 
-      <Stack className={styles.footer} gap={0} align="center" mt="xl">
+      <Stack gap="xs" align="center" mt="xl" ta="center">
         <Text size="sm" c="dimmed">
           Уже есть аккаунт?{' '}
           <Link href="/login" className={styles.link}>

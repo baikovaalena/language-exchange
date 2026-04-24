@@ -6,7 +6,7 @@ import { ActionIcon, Anchor, Box, Button, Divider, Stack } from '@mantine/core';
 import { IconLanguage, IconMenu2, IconX } from '@tabler/icons-react';
 import { scrollToTop } from '@shared/lib/scroll';
 import styles from './Navbar.module.scss';
-import { navLinks } from '../model/links';
+import { NAV_LINKS } from '../model/links';
 
 export const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -17,7 +17,6 @@ export const Navbar = () => {
         <Link
           href="/"
           className={styles.logo}
-          style={{ letterSpacing: '-0.025em' }}
           onClick={() => {
             scrollToTop();
           }}
@@ -29,8 +28,14 @@ export const Navbar = () => {
         </Link>
 
         <Box component="nav" className={styles.nav}>
-          {navLinks.map((link) => (
-            <Anchor key={link.id} href={link.href} size="sm" className={styles.navLink} underline="never">
+          {NAV_LINKS.map((link) => (
+            <Anchor
+              key={link.id}
+              href={link.href}
+              size="sm"
+              className={styles.navLink}
+              underline="never"
+            >
               {link.label}
             </Anchor>
           ))}
@@ -59,8 +64,8 @@ export const Navbar = () => {
 
       {mobileOpen && (
         <Box className={styles.mobileMenu}>
-          <Stack gap={4}>
-            {navLinks.map((link) => (
+          <Stack gap="0.25rem">
+            {NAV_LINKS.map((link) => (
               <Anchor
                 key={link.id}
                 href={link.href}
@@ -74,7 +79,7 @@ export const Navbar = () => {
             ))}
           </Stack>
           <Divider my="sm" />
-          <Stack gap={8}>
+          <Stack gap="0.5rem">
             <Button component={Link} href="/login" variant="default" fullWidth>
               Войти
             </Button>

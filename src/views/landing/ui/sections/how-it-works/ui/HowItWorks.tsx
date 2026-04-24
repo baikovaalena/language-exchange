@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { IconArrowRight, IconStarFilled } from '@tabler/icons-react';
-import { Box, Title, Text } from '@mantine/core';
+import { Box, Stack, Title, Text } from '@mantine/core';
 import STUDY_IMG from '@/shared/images/study.webp';
-import { steps } from '../model/steps';
+import { STEPS } from '../model/steps';
 import styles from './HowItWorks.module.scss';
 
 export const HowItWorks = () => {
@@ -14,7 +14,7 @@ export const HowItWorks = () => {
           <Text component="span" size="sm" fw={500} className={styles.tag}>
             Как это работает
           </Text>
-          <Title order={2} lts="-0.025em" className={styles.title}>
+          <Title order={2} lts="-0.025em" fz="var(--fs-section)" mb="md">
             Три шага до первого разговора
           </Title>
           <Text component="p" size="lg" lh="lg" className={styles.subtitle}>
@@ -22,20 +22,20 @@ export const HowItWorks = () => {
           </Text>
 
           <Box className={styles.steps}>
-            {steps.map((s, i) => (
+            {STEPS.map((s, i) => (
               <Box key={s.id} className={styles.step}>
                 <Box className={styles.stepLeft}>
                   <Box className={styles.stepNum}>{s.num}</Box>
-                  {i < steps.length - 1 && <Box className={styles.stepLine} />}
+                  {i < STEPS.length - 1 && <Box className={styles.stepLine} />}
                 </Box>
-                <Box className={styles.stepContent}>
-                  <Title order={3} className={styles.stepTitle}>
+                <Stack className={styles.stepContent} gap="xs">
+                  <Title order={3} fz="md">
                     {s.title}
                   </Title>
                   <Text component="p" size="sm" lh="lg" className={styles.stepDesc}>
                     {s.desc}
                   </Text>
-                </Box>
+                </Stack>
               </Box>
             ))}
           </Box>
@@ -59,7 +59,7 @@ export const HowItWorks = () => {
             <Text component="p" size="sm" lh="md" className={styles.quoteText}>
               &ldquo;Мой французский вырос с нуля до B1 за полгода!&rdquo;
             </Text>
-            <Text component="p" fz={11} className={styles.quoteAuthor}>
+            <Text component="p" size="xs" className={styles.quoteAuthor}>
               — Sophie, Paris
             </Text>
           </Box>

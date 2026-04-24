@@ -1,7 +1,10 @@
 import { CSSVariablesResolver, createTheme, rem } from '@mantine/core';
 
+import { FONT_STACK } from './constants';
+import type { TThemeOther } from './types';
+
 export const theme = createTheme({
-  fontFamily: "var(--font-inter), 'Inter', sans-serif",
+  fontFamily: FONT_STACK,
   fontFamilyMonospace: 'monospace',
 
   fontSizes: {
@@ -21,7 +24,7 @@ export const theme = createTheme({
   },
 
   headings: {
-    fontFamily: "var(--font-inter), 'Inter', sans-serif",
+    fontFamily: FONT_STACK,
     fontWeight: '600',
     sizes: {
       h1: { fontSize: rem(48), lineHeight: '1.1', fontWeight: '700' },
@@ -34,14 +37,11 @@ export const theme = createTheme({
   },
 
   other: {
-    // ── Font sizes (только для не-Mantine элементов) ──────
-    'fs-sm': '13px',
-    'fs-base': '15px',
-    'fs-xl': '18px',
-    'fs-hero-sub': 'clamp(15px, 2vw, 17px)',
+    // ── Font sizes (clamp-only; sm/md/xl → --mantine-font-size-*) ──
+    'fs-hero-sub': 'clamp(0.9375rem, 2vw, 1.0625rem)',
     'fs-hero': 'clamp(2.1rem, 5vw, 3.5rem)',
     'fs-section': 'clamp(1.6rem, 4vw, 2.4rem)',
-  },
+  } satisfies TThemeOther,
 
   components: {
     Text: {
@@ -62,10 +62,16 @@ export const theme = createTheme({
   },
 });
 
-export const cssVariablesResolver: CSSVariablesResolver = (t) => ({
-  variables: Object.fromEntries(
-    Object.entries(t.other as Record<string, string>).map(([key, value]) => [`--${key}`, value]),
-  ),
-  light: {},
-  dark: {},
-});
+/** Maps `theme.other` keys to `--fs-hero`, `--fs-section`, etc. for SCSS; use `--mantine-font-size-*` for sm/md/xl. */
+export const cssVariablesResolver: CSSVariablesResolver = (t) => {
+  const themeOther = t.other as TThemeOther;
+  return {
+    variables: {
+      '--fs-hero-sub': themeOther['fs-hero-sub'],
+      '--fs-hero': themeOther['fs-hero'],
+      '--fs-section': themeOther['fs-section'],
+    },
+    light: {},
+    dark: {},
+  };
+};

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { IconArrowRight, IconCheck } from '@tabler/icons-react';
 import { Box, Title, Text } from '@mantine/core';
-import { perks } from '../model/perks';
+import { PERKS } from '../model/perks';
 import styles from './BottomCTA.module.scss';
 
 export const BottomCTA = () => {
@@ -15,7 +15,7 @@ export const BottomCTA = () => {
           🎉 Регистрация бесплатна
         </Text>
 
-        <Title order={2} lts="-0.025em" className={styles.title}>
+        <Title order={2} lts="-0.025em" fz="var(--fs-section)" mb="md" c="white">
           Начните говорить сегодня
         </Title>
         <Text component="p" size="lg" lh="lg" className={styles.subtitle}>
@@ -33,10 +33,12 @@ export const BottomCTA = () => {
         </Box>
 
         <Box className={styles.perks}>
-          {perks.map(({ id, label }) => (
+          {PERKS.map(({ id, label }) => (
             <Box key={id} className={styles.perk}>
               <IconCheck size={16} className={styles.checkIcon} />
-              <Text component="span" size="sm">{label}</Text>
+              <Text component="span" size="sm">
+                {label}
+              </Text>
             </Box>
           ))}
         </Box>

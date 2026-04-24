@@ -2,35 +2,21 @@
   width: 100%;
   max-width: 440px;
   margin: 0 auto;
-  padding: 32px;
+  padding: 2rem;
   border: 1px solid var(--color-border);
   border-radius: 16px;
   background: var(--color-bg-primary);
   box-shadow: 0 12px 32px rgb(0 0 0 / 6%);
 }
 
-.title {
-  margin-bottom: 24px;
-  color: var(--color-text-primary);
-  font-size: 24px;
-  text-align: center;
-}
-
 .form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1rem;
 }
 
 .submit {
-  margin-top: 8px;
-}
-
-.footer {
-  margin-top: 24px;
-  color: var(--color-text-secondary);
-  font-size: var(--fs-sm);
-  text-align: center;
+  margin-top: 0.5rem;
 }
 
 .link {
@@ -40,17 +26,5 @@
 
   &:hover {
     text-decoration: underline;
-  }
-}
-
-.mutedLink {
-  display: block;
-  margin-top: 8px;
-  color: var(--color-text-secondary);
-  font-size: var(--fs-sm);
-  text-decoration: none;
-
-  &:hover {
-    color: var(--color-text-primary);
   }
 }

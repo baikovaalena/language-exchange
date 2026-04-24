@@ -1,13 +1,13 @@
 'use client';
 
 import Link from 'next/link';
-import { Button, Paper, PasswordInput, Stack, Text, TextInput, Title } from '@mantine/core';
+import { Anchor, Button, Paper, PasswordInput, Stack, Text, TextInput, Title } from '@mantine/core';
 import styles from '../../AuthPage.module.scss';
 
 export const LoginPage = () => {
   return (
     <Paper className={styles.card}>
-      <Title order={2} fw={600} lh="xs" lts="-0.01em" className={styles.title}>
+      <Title order={4} lts="-0.01em" ta="center" mb="lg">
         С возвращением
       </Title>
 
@@ -19,16 +19,30 @@ export const LoginPage = () => {
         </Button>
       </Stack>
 
-      <Stack className={styles.footer} gap={0} align="center" mt="xl">
+      <Stack gap="xs" align="center" mt="xl" ta="center">
         <Text size="sm" c="dimmed">
           Нет аккаунта?{' '}
           <Link href="/registration" className={styles.link}>
             Зарегистрироваться
           </Link>
         </Text>
-        <Link href="#" className={styles.mutedLink}>
+        <Anchor
+          component={Link}
+          href="#"
+          size="sm"
+          c="dimmed"
+          underline="never"
+          display="block"
+          styles={{
+            root: {
+              '&:hover': {
+                color: 'var(--color-text-primary)',
+              },
+            },
+          }}
+        >
           Отправить письмо для подтверждения повторно
-        </Link>
+        </Anchor>
       </Stack>
     </Paper>
   );

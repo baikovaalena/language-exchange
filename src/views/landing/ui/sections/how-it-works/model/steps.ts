@@ -5,7 +5,7 @@ interface IStep {
   desc: string;
 }
 
-export const steps: IStep[] = [
+export const STEPS: IStep[] = [
   {
     id: 'create-profile',
     num: '01',

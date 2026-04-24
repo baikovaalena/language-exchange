@@ -1,8 +1,7 @@
 import { Anchor, Box, Text } from '@mantine/core';
 import { IconLanguage } from '@tabler/icons-react';
+import { FOOTER_LINK_LABELS } from '../lib/constants';
 import styles from './Footer.module.scss';
-
-const links = ['Конфиденциальность', 'Условия', 'Поддержка'];
 
 export const Footer = () => {
   return (
@@ -22,7 +21,7 @@ export const Footer = () => {
         </Text>
 
         <Box className={styles.links}>
-          {links.map((link) => (
+          {FOOTER_LINK_LABELS.map((link) => (
             <Anchor key={link} href="#" size="sm" className={styles.link} underline="never">
               {link}
             </Anchor>
