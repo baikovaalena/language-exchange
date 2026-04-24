@@ -1,4 +1,5 @@
 import { Box, Title, Text } from '@mantine/core';
+import clsx from 'clsx';
 import { FEATURES } from '../model/features';
 import styles from './FeaturesSection.module.scss';
 
@@ -21,12 +22,7 @@ export const FeaturesSection = () => {
         <Box className={styles.grid}>
           {FEATURES.map((f) => (
             <Box key={f.id} className={styles.card}>
-              <Box
-                className={styles.iconBox}
-                style={{ background: f.bg, color: f.color } as React.CSSProperties}
-              >
-                {f.icon}
-              </Box>
+              <Box className={clsx(styles.iconBox, styles[`iconBox_${f.accent}`])}>{f.icon}</Box>
               <Title order={3} lts="-0.01em" fz="md">
                 {f.title}
               </Title>

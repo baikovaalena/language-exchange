@@ -5,6 +5,7 @@ import HERO_IMG from '@/shared/images/people.webp';
 import AVATAR1 from '@/shared/images/avatar-1.webp';
 import AVATAR2 from '@/shared/images/avatar-2.webp';
 import STUDY_IMG from '@/shared/images/study.webp';
+import clsx from 'clsx';
 import styles from './Hero.module.scss';
 import Image from 'next/image';
 
@@ -68,7 +69,7 @@ export const Hero = () => {
             <Box className={styles.imageOverlay} />
           </Box>
 
-          <Box className={`${styles.floatingCard} ${styles.floatingCardBottom}`}>
+          <Box className={clsx(styles.floatingCard, styles.floatingCardBottom)}>
             <Image src={AVATAR1} alt="" className={styles.floatingAvatar} />
             <Box>
               <Text component="p" size="sm" fw={600} className={styles.floatingName}>

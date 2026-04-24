@@ -77,6 +77,26 @@
   flex-shrink: 0;
 }
 
+.iconBox_primary {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.iconBox_purple {
+  background: var(--color-purple-light);
+  color: var(--color-purple);
+}
+
+.iconBox_success {
+  background: var(--color-success-light);
+  color: var(--color-success);
+}
+
+.iconBox_warning {
+  background: var(--color-amber-light);
+  color: var(--color-warning);
+}
+
 .cardDesc {
   margin: 0;
   color: var(--color-text-secondary);
