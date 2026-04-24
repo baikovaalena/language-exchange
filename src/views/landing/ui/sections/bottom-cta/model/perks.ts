@@ -1,4 +1,4 @@
-export interface IBottomCTAPerk {
+interface IBottomCTAPerk {
   id: string;
   label: string;
 }

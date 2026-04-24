@@ -1,7 +1,7 @@
 import { IconWorld, IconMessage, IconShieldCheck, IconBolt } from '@tabler/icons-react';
 import { ReactNode } from 'react';
 
-export interface IFeature {
+interface IFeature {
   id: string;
   icon: ReactNode;
   title: string;
