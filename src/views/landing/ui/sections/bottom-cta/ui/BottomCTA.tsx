@@ -15,7 +15,7 @@ export const BottomCTA = () => {
           🎉 Регистрация бесплатна
         </Text>
 
-        <Title order={2} lts="-0.025em" fz="var(--fs-section)" mb="md" c="white">
+        <Title order={2} fz="var(--fs-section)" mb="md" c="white">
           Начните говорить сегодня
         </Title>
         <Text component="p" size="lg" lh="lg" className={styles.subtitle}>

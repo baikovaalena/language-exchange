@@ -11,7 +11,7 @@ export const SocialProof = () => {
         <Text component="span" size="sm" fw={500} className={styles.tag}>
           Отзывы
         </Text>
-        <Title order={2} lts="-0.025em" fz="var(--fs-section)" mb="sm">
+        <Title order={2} fz="var(--fs-section)" mb="sm">
           Что говорят пользователи
         </Title>
         <Text component="p" size="lg" className={styles.subtitle}>

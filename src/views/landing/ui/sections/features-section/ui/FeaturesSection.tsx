@@ -11,7 +11,7 @@ export const FeaturesSection = () => {
           <Text component="span" size="sm" fw={500} className={styles.tag}>
             Возможности
           </Text>
-          <Title order={2} lts="-0.025em" fz="var(--fs-section)" mb="md">
+          <Title order={2} fz="var(--fs-section)" mb="md">
             Всё для успешной практики
           </Title>
           <Text component="p" size="lg" lh="md" className={styles.subtitle}>
@@ -23,7 +23,7 @@ export const FeaturesSection = () => {
           {FEATURES.map((f) => (
             <Box key={f.id} className={styles.card}>
               <Box className={clsx(styles.iconBox, styles[`iconBox_${f.accent}`])}>{f.icon}</Box>
-              <Title order={3} lts="-0.01em" fz="md">
+              <Title order={3} fz="md">
                 {f.title}
               </Title>
               <Text component="p" size="sm" lh="lg" className={styles.cardDesc}>

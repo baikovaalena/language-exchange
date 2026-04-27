@@ -25,7 +25,7 @@ export const Hero = () => {
             </Text>
           </Box>
 
-          <Title order={1} lts="-0.025em" fz="var(--fs-hero)" mb="lg">
+          <Title order={1} fz="var(--fs-hero)" mb="lg">
             Найди партнёра для{' '}
             <Box component="span" className={styles.headlineAccent}>
               языкового обмена

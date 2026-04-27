@@ -14,7 +14,7 @@ export const HowItWorks = () => {
           <Text component="span" size="sm" fw={500} className={styles.tag}>
             Как это работает
           </Text>
-          <Title order={2} lts="-0.025em" fz="var(--fs-section)" mb="md">
+          <Title order={2} fz="var(--fs-section)" mb="md">
             Три шага до первого разговора
           </Title>
           <Text component="p" size="lg" lh="lg" className={styles.subtitle}>

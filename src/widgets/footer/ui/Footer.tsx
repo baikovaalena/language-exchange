@@ -11,7 +11,7 @@ export const Footer = () => {
           <Box className={styles.logoIcon}>
             <IconLanguage size={16} stroke={1.5} />
           </Box>
-          <Text component="span" size="md" fw={600} lts="-0.025em" className={styles.logoText}>
+          <Text component="span" size="md" fw={600} className={styles.logoText}>
             Language exchange
           </Text>
         </Box>

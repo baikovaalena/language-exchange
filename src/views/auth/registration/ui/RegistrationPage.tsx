@@ -7,7 +7,7 @@ import styles from '../../AuthPage.module.scss';
 export const RegistrationPage = () => {
   return (
     <Paper className={styles.card}>
-      <Title order={4} lts="-0.01em" ta="center" mb="lg">
+      <Title order={4} ta="center" mb="lg">
         Создайте аккаунт
       </Title>
 
