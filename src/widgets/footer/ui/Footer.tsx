@@ -1,29 +1,33 @@
+import { Anchor, Box, Text } from '@mantine/core';
 import { IconLanguage } from '@tabler/icons-react';
+import { FOOTER_LINK_LABELS } from '../lib/constants';
 import styles from './Footer.module.scss';
 
-const links = ['Конфиденциальность', 'Условия', 'Поддержка'];
-
-export function Footer() {
+export const Footer = () => {
   return (
-    <footer className={styles.footer}>
-      <div className={styles.inner}>
-        <div className={styles.logoBlock}>
-          <div className={styles.logoIcon}>
+    <Box component="footer" className={styles.footer}>
+      <Box className={styles.inner}>
+        <Box className={styles.logoBlock}>
+          <Box className={styles.logoIcon}>
             <IconLanguage size={16} stroke={1.5} />
-          </div>
-          <span className={styles.logoText}>Language exchange</span>
-        </div>
+          </Box>
+          <Text component="span" size="md" fw={600} lts="-0.025em" className={styles.logoText}>
+            Language exchange
+          </Text>
+        </Box>
 
-        <p className={styles.copyright}>© 2026 Language exchange. Все права защищены.</p>
+        <Text component="p" size="sm" className={styles.copyright}>
+          © 2026 Language exchange. Все права защищены.
+        </Text>
 
-        <div className={styles.links}>
-          {links.map((link) => (
-            <a key={link} href="#" className={styles.link}>
+        <Box className={styles.links}>
+          {FOOTER_LINK_LABELS.map((link) => (
+            <Anchor key={link} href="#" size="sm" className={styles.link} underline="never">
               {link}
-            </a>
+            </Anchor>
           ))}
-        </div>
-      </div>
-    </footer>
+        </Box>
+      </Box>
+    </Box>
   );
-}
+};

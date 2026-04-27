@@ -14,10 +14,12 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
           <div className={styles.logo}>
             <IconLanguage size={40} stroke={2.2} onClick={() => router.push('/')} />
           </div>
-          <Title order={1} className={styles.brand}>
+          <Title order={1} fz="var(--fs-section)" lts="-0.02em" className={styles.brand}>
             Language exchange
           </Title>
-          <Text className={styles.tagline}>Общайся. Учись. Практикуй.</Text>
+          <Text className={styles.tagline} size="lg" lh="md" fw={500}>
+            Общайся. Учись. Практикуй.
+          </Text>
         </div>
 
         <div className={styles.content}>{children}</div>

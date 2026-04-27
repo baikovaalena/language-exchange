@@ -2,17 +2,17 @@
 
 import { ActionIcon } from '@mantine/core';
 import { IconArrowUp } from '@tabler/icons-react';
-import { scrollToTop, useIsScrolled } from '@shared/lib/scroll/scroll';
+import clsx from 'clsx';
+import { scrollToTop } from '@shared/lib/scroll/scrollToTop';
+import { useIsScrolled } from '../model/useIsScrolled';
 import styles from './ScrollToTopButton.module.scss';
 
-const SCROLL_THRESHOLD = 400;
-
-export function ScrollToTopButton() {
-  const visible = useIsScrolled(SCROLL_THRESHOLD);
+export const ScrollToTopButton = () => {
+  const visible = useIsScrolled();
 
   return (
     <ActionIcon
-      className={`${styles.button} ${visible ? styles.visible : ''}`}
+      className={clsx(styles.button, visible && styles.visible)}
       onClick={() => scrollToTop()}
       aria-label="Наверх"
       size="xl"
@@ -23,4 +23,4 @@ export function ScrollToTopButton() {
       <IconArrowUp size={22} stroke={2} />
     </ActionIcon>
   );
-}
+};

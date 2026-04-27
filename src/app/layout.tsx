@@ -1,4 +1,4 @@
-import { ColorSchemeScript, MantineProvider, mantineHtmlProps } from '@mantine/core';
+import { mantineHtmlProps } from '@mantine/core';
 import { inter } from '@/shared/fonts';
 import '@mantine/core/styles.css';
 import '@mantine/notifications/styles.css';
@@ -12,13 +12,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" {...mantineHtmlProps} className={inter.variable}>
-      <head>
-        <ColorSchemeScript />
-      </head>
       <body>
-        <MantineProvider>
-          <Providers>{children}</Providers>
-        </MantineProvider>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

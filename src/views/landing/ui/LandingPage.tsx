@@ -1,16 +1,16 @@
 import { Box } from '@mantine/core';
-import { Navbar } from '@widgets/navbar/ui/Navbar';
-import { Hero } from '@widgets/hero/ui/Hero';
-import { LanguageTicker } from '@widgets/language-ticker/ui/LanguageTicker';
-import { FeaturesSection } from '@widgets/features-section/ui/FeaturesSection';
-import { HowItWorks } from '@widgets/how-it-works/ui/HowItWorks';
-import { SocialProof } from '@widgets/social-proof/ui/SocialProof';
-import { BottomCTA } from '@widgets/bottom-cta/ui/BottomCTA';
-import { Footer } from '@widgets/footer/ui/Footer';
-import { ScrollToTopButton } from '@widgets/scroll-to-top/ui/ScrollToTopButton';
+import { Navbar } from './sections/navbar/ui/Navbar';
+import { Hero } from './sections/hero/ui/Hero';
+import { LanguageTicker } from './sections/language-ticker/ui/LanguageTicker';
+import { FeaturesSection } from './sections/features-section/ui/FeaturesSection';
+import { HowItWorks } from './sections/how-it-works/ui/HowItWorks';
+import { SocialProof } from './sections/social-proof/ui/SocialProof';
+import { BottomCTA } from './sections/bottom-cta/ui/BottomCTA';
+import { Footer } from '@widgets/footer';
+import { ScrollToTopButton } from '@widgets/scroll-to-top';
 import styles from './LandingPage.module.scss';
 
-export function LandingPage() {
+export const LandingPage = () => {
   return (
     <Box className={styles.page}>
       <Navbar />
@@ -26,4 +26,4 @@ export function LandingPage() {
       <ScrollToTopButton />
     </Box>
   );
-}
+};
