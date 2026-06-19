@@ -1,5 +1,5 @@
-import { HomePage } from '@pages/home';
+import { AppRouter } from './providers/router';
 
 export const App = () => {
-  return <HomePage />;
+  return <AppRouter />;
 };
