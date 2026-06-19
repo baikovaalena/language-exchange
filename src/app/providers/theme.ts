@@ -2,7 +2,7 @@ import { createTheme } from '@mantine/core';
 import type { MantineColorsTuple } from '@mantine/core';
 import { rem } from '@mantine/core';
 
-const FONT_STACK = 'Inter, system-ui, sans-serif';
+const FONT_STACK = 'Onest, system-ui, sans-serif';
 
 export const theme = createTheme({
   primaryColor: 'primary',
