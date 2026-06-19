@@ -12,6 +12,6 @@ interface IProps {
   children: ReactNode;
 }
 
-export function MantineProvider({ children }: IProps) {
-  return <MantineProviderRoot theme={theme}>{children}</MantineProviderRoot>;
-}
+export const MantineProvider = ({ children }: IProps) => (
+  <MantineProviderRoot theme={theme}>{children}</MantineProviderRoot>
+);

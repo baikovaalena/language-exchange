@@ -1,5 +1,5 @@
 import { HomePage } from '@pages/home';
 
-export function App() {
+export const App = () => {
   return <HomePage />;
-}
+};
