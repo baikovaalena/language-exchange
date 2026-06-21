@@ -1,17 +1,13 @@
-import { createTheme, MantineProvider as MantineProviderRoot } from '@mantine/core';
+import { MantineProvider as MantineProviderRoot } from '@mantine/core';
 import type { ReactNode } from 'react';
-
-const theme = createTheme({
-  fontFamily: 'Inter, system-ui, sans-serif',
-  headings: {
-    fontFamily: 'Inter, system-ui, sans-serif',
-  },
-});
+import { theme } from './theme';
 
 interface IProps {
   children: ReactNode;
 }
 
 export const MantineProvider = ({ children }: IProps) => (
-  <MantineProviderRoot theme={theme}>{children}</MantineProviderRoot>
+  <MantineProviderRoot theme={theme} defaultColorScheme="light">
+    {children}
+  </MantineProviderRoot>
 );
