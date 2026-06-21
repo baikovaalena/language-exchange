@@ -8,7 +8,6 @@ export const theme = createTheme({
   fontFamily: FONT_STACK,
   autoContrast: true,
   luminanceThreshold: 0.3,
-
   fontSizes: {
     xs: rem(12),
     sm: rem(13),
@@ -16,7 +15,6 @@ export const theme = createTheme({
     lg: rem(16),
     xl: rem(18),
   },
-
   lineHeights: {
     xs: '1.2',
     sm: '1.4',
@@ -24,7 +22,6 @@ export const theme = createTheme({
     lg: '1.7',
     xl: '1.75',
   },
-
   headings: {
     fontFamily: FONT_STACK,
     fontWeight: '600',
@@ -37,7 +34,6 @@ export const theme = createTheme({
       h6: { fontSize: rem(16), lineHeight: '1.4', fontWeight: '600' },
     },
   },
-
   spacing: {
     xs: rem(8),
     sm: rem(12),
@@ -45,7 +41,6 @@ export const theme = createTheme({
     lg: rem(24),
     xl: rem(32),
   },
-
   radius: {
     xs: rem(4),
     sm: rem(6),
@@ -53,7 +48,6 @@ export const theme = createTheme({
     lg: rem(12),
     xl: rem(16),
   },
-
   other: {
     fontWeights: {
       regular: 400,
