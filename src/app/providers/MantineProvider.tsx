@@ -7,5 +7,7 @@ interface IProps {
 }
 
 export const MantineProvider = ({ children }: IProps) => (
-  <MantineProviderRoot theme={theme}>{children}</MantineProviderRoot>
+  <MantineProviderRoot theme={theme} defaultColorScheme="auto">
+    {children}
+  </MantineProviderRoot>
 );
