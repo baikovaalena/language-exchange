@@ -1,2 +1,2 @@
 export { MantineProvider } from './MantineProvider';
-export { AppRouter } from './router';
+export { AppRouter } from './AppRouter';
