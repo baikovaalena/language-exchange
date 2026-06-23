@@ -1,7 +1,7 @@
 import { IconArrowRight, IconStarFilled } from '@tabler/icons-react';
 import { Box, Stack, Text, Title } from '@mantine/core';
 import { Link } from 'react-router-dom';
-// import STUDY_IMG from '@/shared/images/study.webp';
+import STUDY_IMG from '@/shared/images/study.webp';
 import { STEPS } from '../model/steps';
 import styles from './HowItWorks.module.scss';
 
@@ -46,7 +46,7 @@ export const HowItWorks = () => {
 
         <Box className={styles.right}>
           <Box className={styles.imageCard}>
-            {/* <img src={STUDY_IMG} alt="Студенты занимаются языком вместе" className={styles.image} /> */}
+            <img src={STUDY_IMG} alt="Студенты занимаются языком вместе" className={styles.image} />
           </Box>
 
           <Box className={styles.quoteCard}>

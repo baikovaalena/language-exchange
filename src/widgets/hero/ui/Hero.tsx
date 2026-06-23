@@ -1,14 +1,12 @@
 import { IconArrowRight, IconStarFilled } from '@tabler/icons-react';
-import { Box, Text, Title } from '@mantine/core';
+import { Box, Image, Text, Title } from '@mantine/core';
 import clsx from 'clsx';
 import { Link } from 'react-router-dom';
-// import HERO_IMG from '@/shared/images/people.webp';
-// import AVATAR1 from '@/shared/images/avatar-1.webp';
-// import AVATAR2 from '@/shared/images/avatar-2.webp';
-// import STUDY_IMG from '@/shared/images/study.webp';
+import people from '@/shared/images/people.webp';
+import avatar1 from '@/shared/images/avatar-1.webp';
+import avatar2 from '@/shared/images/avatar-2.webp';
+import study from '@/shared/images/study.webp';
 import styles from './Hero.module.scss';
-
-// const STACK_AVATARS = [AVATAR1, AVATAR2, HERO_IMG, STUDY_IMG];
 
 export const Hero = () => {
   return (
@@ -47,9 +45,9 @@ export const Hero = () => {
 
           <Box className={styles.socialProof}>
             <Box className={styles.avatarStack}>
-              {/* {STACK_AVATARS.map((src) => (
-                <img key={src} src={src} alt="" className={styles.stackAvatar} />
-              ))} */}
+              {[avatar1, avatar2, people, study].map((src) => (
+                <Image key={src} src={src} className={styles.stackAvatar} />
+              ))}
             </Box>
             <Box>
               <Box className={styles.stars}>
@@ -66,12 +64,12 @@ export const Hero = () => {
 
         <Box className={styles.right}>
           <Box className={styles.imageCard}>
-            {/* <img src={HERO_IMG} alt="Люди общаются и изучают языки" className={styles.heroImage} /> */}
+            <Image src={people} className={styles.heroImage} />
             <Box className={styles.imageOverlay} />
           </Box>
 
           <Box className={clsx(styles.floatingCard, styles.floatingCardBottom)}>
-            {/* <img src={AVATAR1} alt="" className={styles.floatingAvatar} /> */}
+            <Image src={avatar1} alt="" className={styles.floatingAvatar} />
             <Box>
               <Text component="p" size="sm" fw={600} className={styles.floatingName}>
                 Анна К.
