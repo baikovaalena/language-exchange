@@ -1,5 +1,5 @@
 import { IconArrowRight, IconStarFilled } from '@tabler/icons-react';
-import { Box, Stack, Text, Title } from '@mantine/core';
+import { Box, Image, Stack, Text, Title } from '@mantine/core';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { ROUTES } from '@shared/config/routes';
@@ -51,11 +51,7 @@ export const HowItWorks = () => {
 
         <Box className={styles.right}>
           <Box className={styles.imageCard}>
-            <img
-              src={studyImage}
-              alt={t('howItWorks.imageAlt')}
-              className={styles.image}
-            />
+            <Image src={studyImage} alt={t('howItWorks.imageAlt')} className={styles.image} />
           </Box>
 
           <Box className={styles.quoteCard}>
