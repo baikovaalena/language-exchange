@@ -1,20 +1,24 @@
 import { useState } from 'react';
 import { ActionIcon, Anchor, Box, Button, Divider, Stack } from '@mantine/core';
 import { IconLanguage, IconMenu2, IconX } from '@tabler/icons-react';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import { ROUTES } from '@shared/config/routes';
 import { scrollToTop } from '@shared/lib/scroll';
-import { NAV_LINKS } from '../model/links';
+import { ANCHOR_LINKS } from './model/links';
 import styles from './Navbar.module.scss';
-import { ThemeToggle } from '@/shared/ui/ThemeToggle';
+import { ThemeToggle } from '@shared/ui/ThemeToggle';
+import { LanguageToggle } from '@shared/ui/LanguageToggle';
 
 export const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { t } = useTranslation('landing');
 
   return (
     <Box component="header" className={styles.header}>
       <Box className={styles.inner}>
         <Link
-          to="/"
+          to={ROUTES.home}
           className={styles.logo}
           onClick={() => {
             scrollToTop();
@@ -27,7 +31,7 @@ export const Navbar = () => {
         </Link>
 
         <Box component="nav" className={styles.nav}>
-          {NAV_LINKS.map((link) => (
+          {ANCHOR_LINKS.map((link) => (
             <Anchor
               key={link.navKey}
               component={Link}
@@ -36,22 +40,28 @@ export const Navbar = () => {
               className={styles.navLink}
               underline="never"
             >
-              {link.navKey}
+              {t(`navbar.links.${link.navKey}`)}
             </Anchor>
           ))}
         </Box>
 
         <Box className={styles.right}>
           <Box className={styles.desktopControls}>
+            <LanguageToggle />
             <ThemeToggle />
           </Box>
 
           <Box className={styles.actions}>
-            <Button component={Link} to="/login" variant="subtle" color="gray" size="sm">
-              Войти
+            <Button component={Link} to={ROUTES.login} variant="subtle" color="gray" size="sm">
+              {t('navbar.login')}
             </Button>
-            <Button component={Link} to="/registration" size="sm" className={styles.signUpButton}>
-              Регистрация
+            <Button
+              component={Link}
+              to={ROUTES.registration}
+              size="sm"
+              className={styles.signUpButton}
+            >
+              {t('navbar.registration')}
             </Button>
           </Box>
 
@@ -61,7 +71,7 @@ export const Navbar = () => {
             color="gray"
             size="lg"
             onClick={() => setMobileOpen((prev) => !prev)}
-            aria-label="Меню"
+            aria-label={t('navbar.menu')}
           >
             {mobileOpen ? <IconX size={24} /> : <IconMenu2 size={24} />}
           </ActionIcon>
@@ -71,7 +81,7 @@ export const Navbar = () => {
       {mobileOpen && (
         <Box className={styles.mobileMenu}>
           <Stack gap="0.25rem">
-            {NAV_LINKS.map((link) => (
+            {ANCHOR_LINKS.map((link) => (
               <Anchor
                 key={link.navKey}
                 component={Link}
@@ -81,21 +91,27 @@ export const Navbar = () => {
                 underline="never"
                 onClick={() => setMobileOpen(false)}
               >
-                {link.navKey}
+                {t(`navbar.links.${link.navKey}`)}
               </Anchor>
             ))}
           </Stack>
           <Divider my="xs" />
           <Box className={styles.mobileControls}>
+            <LanguageToggle />
             <ThemeToggle />
           </Box>
           <Divider my="xs" />
           <Stack gap="0.5rem">
-            <Button component={Link} to="/login" variant="default" fullWidth>
-              Войти
+            <Button component={Link} to={ROUTES.login} variant="default" fullWidth>
+              {t('navbar.login')}
             </Button>
-            <Button component={Link} to="/registration" fullWidth className={styles.signUpButton}>
-              Регистрация
+            <Button
+              component={Link}
+              to={ROUTES.registration}
+              fullWidth
+              className={styles.signUpButton}
+            >
+              {t('navbar.registration')}
             </Button>
           </Stack>
         </Box>

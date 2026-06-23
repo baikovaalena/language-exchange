@@ -1,7 +1,7 @@
 import { Box } from '@mantine/core';
-import { Hero } from '@widgets/hero';
-import { HowItWorks } from '@widgets/how-it-works';
-import { Navbar } from '@widgets/navbar';
+import { Hero } from './Hero/Hero';
+import { HowItWorks } from './HowItWorks/HowItWorks';
+import { Navbar } from './Navbar/Navbar';
 import styles from './LandingPage.module.scss';
 
 export const LandingPage = () => {

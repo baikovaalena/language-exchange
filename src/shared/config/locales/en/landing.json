@@ -1,0 +1,50 @@
+{
+  "navbar": {
+    "links": {
+      "features": "Features",
+      "howItWorks": "How it works",
+      "reviews": "Reviews"
+    },
+    "login": "Log in",
+    "registration": "Sign up",
+    "language": "Change language",
+    "menu": "Menu"
+  },
+  "hero": {
+    "badge": "Language exchange platform",
+    "title": {
+      "start": "Learn languages",
+      "accent": "with native speakers"
+    },
+    "subtitle": "Find practice partners, chat and make video calls for free, with no middlemen.",
+    "cta": "Start learning",
+    "socialProof": "4.9 · Over 10,000 users",
+    "student": {
+      "name": "Anna K.",
+      "meta": "Learning English"
+    }
+  },
+  "howItWorks": {
+    "tag": "How it works",
+    "title": "Three steps to confident conversations",
+    "subtitle": "Starting language practice is easier than it seems — it only takes a few minutes.",
+    "steps": {
+      "01": {
+        "title": "Create a profile",
+        "desc": "Add your native language, target languages and interests so we can match you with the right partners."
+      },
+      "02": {
+        "title": "Find a partner",
+        "desc": "Browse profiles, filter by language and level, and send language exchange invitations."
+      },
+      "03": {
+        "title": "Start talking",
+        "desc": "Chat or join a video call, and practice in real conversations with native speakers."
+      }
+    },
+    "cta": "Start for free",
+    "imageAlt": "Students studying a language together",
+    "quote": "“I found a regular English partner in a month — now we talk every week.”",
+    "quoteAuthor": "Maria, learning English"
+  }
+}

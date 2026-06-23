@@ -1,3 +1,5 @@
+@use '@app/styles/breakpoints' as bp;
+
 .section {
   padding: 6rem 0;
   background: var(--color-primary-light);
@@ -12,11 +14,11 @@
   margin: 0 auto;
   padding: 0 1.5rem;
 
-  @media (width <= 1024px) {
+  @media (width <= bp.$breakpoint-tablet) {
     gap: 3rem;
   }
 
-  @media (width <= 768px) {
+  @media (width <= bp.$breakpoint-mobile) {
     gap: 3rem;
     grid-template-columns: 1fr;
     padding: 0 1.25rem;
@@ -37,10 +39,6 @@
   border-radius: 100px;
   background: var(--color-bg-primary);
   color: var(--color-primary);
-}
-
-.title {
-  font-size: clamp(1.75rem, 3.5vw, 2.25rem);
 }
 
 .subtitle {
@@ -76,7 +74,7 @@
   height: 48px;
   border-radius: 14px;
   background: var(--color-primary);
-  color: white;
+  color: var(--color-on-primary);
   font-size: var(--mantine-font-size-md);
   font-weight: 700;
   flex-shrink: 0;
@@ -107,7 +105,7 @@
   padding: 0.875rem 1.75rem;
   border-radius: 12px;
   background: var(--color-primary);
-  color: white;
+  color: var(--color-on-primary);
   font-size: var(--mantine-font-size-md);
   font-weight: 600;
   text-decoration: none;
@@ -124,7 +122,7 @@
 .right {
   position: relative;
 
-  @media (width <= 768px) {
+  @media (width <= bp.$breakpoint-mobile) {
     display: none;
   }
 }
@@ -133,7 +131,7 @@
   overflow: hidden;
   border: 1px solid var(--color-border);
   border-radius: 24px;
-  box-shadow: 0 24px 64px rgb(0 0 0 / 10%);
+  box-shadow: 0 24px 64px var(--color-surface-shadow);
 }
 
 .image {
@@ -142,7 +140,7 @@
   height: 500px;
   object-fit: cover;
 
-  @media (width <= 1024px) {
+  @media (width <= bp.$breakpoint-tablet) {
     height: 400px;
   }
 }
@@ -156,9 +154,9 @@
   border: 1px solid var(--color-border);
   border-radius: 16px;
   background: var(--color-bg-primary);
-  box-shadow: 0 12px 32px rgb(0 0 0 / 10%);
+  box-shadow: 0 12px 32px var(--color-surface-shadow);
 
-  @media (width <= 1024px) {
+  @media (width <= bp.$breakpoint-tablet) {
     bottom: -20px;
     left: -16px;
   }

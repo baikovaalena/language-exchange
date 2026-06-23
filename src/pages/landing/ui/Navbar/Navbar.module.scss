@@ -1,3 +1,5 @@
+@use '@app/styles/breakpoints' as bp;
+
 .header {
   position: sticky;
   top: 0;
@@ -16,7 +18,7 @@
   margin: 0 auto;
   padding: 1rem 1.5rem;
 
-  @media (width <= 768px) {
+  @media (width <= bp.$breakpoint-mobile) {
     padding: 0.875rem 1.25rem;
   }
 }
@@ -40,7 +42,7 @@
   height: 36px;
   border-radius: 10px;
   background: var(--color-primary);
-  color: white;
+  color: var(--color-on-primary);
   flex-shrink: 0;
 }
 
@@ -49,7 +51,7 @@
   align-items: center;
   gap: 2rem;
 
-  @media (width <= 768px) {
+  @media (width <= bp.$breakpoint-mobile) {
     display: none;
   }
 }
@@ -71,7 +73,11 @@
 }
 
 .desktopControls {
-  @media (width <= 768px) {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  @media (width <= bp.$breakpoint-mobile) {
     display: none;
   }
 }
@@ -81,7 +87,7 @@
   align-items: center;
   gap: 0.75rem;
 
-  @media (width <= 768px) {
+  @media (width <= bp.$breakpoint-mobile) {
     display: none;
   }
 }
@@ -104,7 +110,7 @@
   color: var(--color-text-primary);
   cursor: pointer;
 
-  @media (width <= 768px) {
+  @media (width <= bp.$breakpoint-mobile) {
     display: flex;
   }
 }
@@ -118,7 +124,7 @@
   animation: slideDown 0.15s ease-out;
   border-top: 1px solid var(--color-border);
 
-  @media (width >= 769px) {
+  @media (width > bp.$breakpoint-mobile) {
     display: none;
   }
 }
@@ -137,7 +143,9 @@
 
 .mobileControls {
   display: flex;
+  align-items: center;
   justify-content: center;
+  gap: 0.5rem;
   padding: 0.25rem;
 }
 

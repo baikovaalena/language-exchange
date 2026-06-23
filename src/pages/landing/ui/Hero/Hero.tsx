@@ -1,7 +1,9 @@
 import { IconArrowRight, IconStarFilled } from '@tabler/icons-react';
 import { Box, Image, Text, Title } from '@mantine/core';
 import clsx from 'clsx';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import { ROUTES } from '@shared/config/routes';
 import people from '@/shared/images/people.webp';
 import avatar1 from '@/shared/images/avatar-1.webp';
 import avatar2 from '@/shared/images/avatar-2.webp';
@@ -9,6 +11,8 @@ import study from '@/shared/images/study.webp';
 import styles from './Hero.module.scss';
 
 export const Hero = () => {
+  const { t } = useTranslation('landing');
+
   return (
     <Box component="section" className={styles.section}>
       <Box className={styles.bgGradient} />
@@ -20,26 +24,25 @@ export const Hero = () => {
           <Box className={styles.badge}>
             <Box component="span" className={styles.badgeDot} />
             <Text component="span" size="sm">
-              Платформа для языкового обмена
+              {t('hero.badge')}
             </Text>
           </Box>
 
-          <Title order={1} className={styles.title} mb="lg">
-            Учите языки{' '}
+          <Title order={1} mb="lg">
+            {t('hero.title.start')}{' '}
             <Box component="span" className={styles.headlineAccent}>
-              с носителями
+              {t('hero.title.accent')}
               <Box component="span" className={styles.headlineUnderline} />
             </Box>
           </Title>
 
           <Text component="p" size="lg" lh="lg" className={styles.subtext}>
-            Находите партнёров для практики, общайтесь в чате и на видеозвонках — бесплатно и без
-            посредников.
+            {t('hero.subtitle')}
           </Text>
 
           <Box className={styles.ctaRow}>
-            <Link to="/registration" className={styles.ctaPrimary}>
-              Начать обучение <IconArrowRight size={20} />
+            <Link to={ROUTES.registration} className={styles.ctaPrimary}>
+              {t('hero.cta')} <IconArrowRight size={20} />
             </Link>
           </Box>
 
@@ -56,7 +59,7 @@ export const Hero = () => {
                 ))}
               </Box>
               <Text component="p" size="xs" className={styles.reviewText}>
-                4.9 · Более 10 000 пользователей
+                {t('hero.socialProof')}
               </Text>
             </Box>
           </Box>
@@ -72,10 +75,10 @@ export const Hero = () => {
             <Image src={avatar1} alt="" className={styles.floatingAvatar} />
             <Box>
               <Text component="p" size="sm" fw={600} className={styles.floatingName}>
-                Анна К.
+                {t('hero.student.name')}
               </Text>
               <Text component="p" size="xs" lh="sm" className={styles.floatingMeta}>
-                Изучает английский
+                {t('hero.student.meta')}
               </Text>
               <Box className={styles.floatingStars}>
                 {Array.from({ length: 5 }).map((_, i) => (
