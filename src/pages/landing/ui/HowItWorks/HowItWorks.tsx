@@ -2,7 +2,7 @@ import { IconArrowRight, IconStarFilled } from '@tabler/icons-react';
 import { Box, Image, Stack, Text, Title } from '@mantine/core';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { ROUTES } from '@shared/config/routes';
+import { ROUTES } from '@shared/constants/routes';
 import studyImage from '@/shared/images/study.webp';
 import styles from './HowItWorks.module.scss';
 

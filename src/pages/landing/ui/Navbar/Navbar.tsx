@@ -3,7 +3,7 @@ import { ActionIcon, Anchor, Box, Button, Divider, Stack } from '@mantine/core';
 import { IconLanguage, IconMenu2, IconX } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { ROUTES } from '@shared/config/routes';
+import { ROUTES } from '@shared/constants/routes';
 import { scrollToTop } from '@shared/lib/scroll';
 import { ANCHOR_LINKS } from './model/links';
 import styles from './Navbar.module.scss';

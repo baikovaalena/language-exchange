@@ -1,4 +1,4 @@
-import { ANCHORS } from '@shared/config/anchors';
+import { ANCHORS } from '@shared/constants/anchors';
 
 interface IAnchorLink {
   navKey: 'features' | 'howItWorks' | 'reviews';

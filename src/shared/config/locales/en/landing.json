@@ -22,6 +22,12 @@
     "student": {
       "name": "Anna K.",
       "meta": "Learning English"
+    },
+    "images": {
+      "people": "Language exchange partners chatting together",
+      "avatar1": "Portrait of Anna K., a language learner",
+      "avatar2": "Portrait of a language exchange user",
+      "study": "Students practicing a language"
     }
   },
   "howItWorks": {

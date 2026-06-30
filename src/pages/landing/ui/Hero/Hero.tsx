@@ -3,12 +3,19 @@ import { Box, Image, Text, Title } from '@mantine/core';
 import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { ROUTES } from '@shared/config/routes';
+import { ROUTES } from '@shared/constants/routes';
 import people from '@/shared/images/people.webp';
 import avatar1 from '@/shared/images/avatar-1.webp';
 import avatar2 from '@/shared/images/avatar-2.webp';
 import study from '@/shared/images/study.webp';
 import styles from './Hero.module.scss';
+
+const stackImages = [
+  { src: avatar1, altKey: 'hero.images.avatar1' },
+  { src: avatar2, altKey: 'hero.images.avatar2' },
+  { src: people, altKey: 'hero.images.people' },
+  { src: study, altKey: 'hero.images.study' },
+] as const;
 
 export const Hero = () => {
   const { t } = useTranslation('landing');
@@ -48,8 +55,8 @@ export const Hero = () => {
 
           <Box className={styles.socialProof}>
             <Box className={styles.avatarStack}>
-              {[avatar1, avatar2, people, study].map((src) => (
-                <Image key={src} src={src} className={styles.stackAvatar} />
+              {stackImages.map(({ src, altKey }) => (
+                <Image key={src} src={src} alt={t(altKey)} className={styles.stackAvatar} />
               ))}
             </Box>
             <Box>
@@ -67,12 +74,12 @@ export const Hero = () => {
 
         <Box className={styles.right}>
           <Box className={styles.imageCard}>
-            <Image src={people} className={styles.heroImage} />
+            <Image src={people} alt={t('hero.images.people')} className={styles.heroImage} />
             <Box className={styles.imageOverlay} />
           </Box>
 
           <Box className={clsx(styles.floatingCard, styles.floatingCardBottom)}>
-            <Image src={avatar1} alt="" className={styles.floatingAvatar} />
+            <Image src={avatar1} alt={t('hero.images.avatar1')} className={styles.floatingAvatar} />
             <Box>
               <Text component="p" size="sm" fw={600} className={styles.floatingName}>
                 {t('hero.student.name')}

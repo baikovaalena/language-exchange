@@ -1,6 +1,6 @@
 import { HomePage } from '@pages/home';
 import { LandingPage } from '@pages/landing';
-import { ROUTES } from '@shared/config/routes';
+import { ROUTES } from '@shared/constants/routes';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
