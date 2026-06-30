@@ -1,12 +1,17 @@
-import { Box, Group } from '@mantine/core';
-import { ThemeToggle } from '@shared/ui/ThemeToggle';
+import { Box } from '@mantine/core';
+import { Hero } from './Hero/Hero';
+import { HowItWorks } from './HowItWorks/HowItWorks';
+import { Navbar } from './Navbar/Navbar';
+import styles from './LandingPage.module.scss';
 
 export const LandingPage = () => {
   return (
-    <Box>
-      <Group justify="flex-end" p="md">
-        <ThemeToggle />
-      </Group>
+    <Box className={styles.page}>
+      <Navbar />
+      <Box component="main" className={styles.main}>
+        <Hero />
+        <HowItWorks />
+      </Box>
     </Box>
   );
 };

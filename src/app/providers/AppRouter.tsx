@@ -1,14 +1,15 @@
 import { HomePage } from '@pages/home';
 import { LandingPage } from '@pages/landing';
+import { ROUTES } from '@shared/constants/routes';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: ROUTES.home,
     element: <LandingPage />,
   },
   {
-    path: '/app',
+    path: ROUTES.app,
     element: <HomePage />,
   },
 ]);
