@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { STORAGE_KEYS } from '@shared/constants/localStorage';
 
 export const LanguageToggle = () => {
-  const { i18n, t } = useTranslation('landing');
+  const { i18n, t } = useTranslation();
   const currentLanguage = i18n.resolvedLanguage ?? i18n.language;
   const nextLanguage = currentLanguage === 'ru' ? 'en' : 'ru';
 

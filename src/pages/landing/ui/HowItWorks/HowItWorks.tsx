@@ -5,14 +5,13 @@ import { Link } from 'react-router-dom';
 import { ROUTES } from '@shared/constants/routes';
 import studyImage from '@/shared/images/study.webp';
 import styles from './HowItWorks.module.scss';
-
-const STEP_IDS = ['01', '02', '03'] as const;
+import { ANCHORS } from '@shared/constants/anchors';
 
 export const HowItWorks = () => {
   const { t } = useTranslation('landing');
 
   return (
-    <Box component="section" id="how" className={styles.section}>
+    <Box component="section" id={ANCHORS.how} className={styles.section}>
       <Box className={styles.inner}>
         <Box className={styles.left}>
           <Text component="span" size="sm" fw={500} className={styles.tag}>
@@ -26,18 +25,18 @@ export const HowItWorks = () => {
           </Text>
 
           <Box className={styles.steps}>
-            {STEP_IDS.map((id, i) => (
-              <Box key={id} className={styles.step}>
+            {Array.from({ length: 3 }).map((_, i, steps) => (
+              <Box key={i} className={styles.step}>
                 <Box className={styles.stepLeft}>
-                  <Box className={styles.stepNum}>{id}</Box>
-                  {i < STEP_IDS.length - 1 && <Box className={styles.stepLine} />}
+                  <Box className={styles.stepNum}>0{i + 1}</Box>
+                  {i < steps.length - 1 && <Box className={styles.stepLine} />}
                 </Box>
                 <Stack className={styles.stepContent} gap="xs">
                   <Title order={3} fz="md">
-                    {t(`howItWorks.steps.${id}.title`)}
+                    {t(`howItWorks.steps.0${i + 1}.title`)}
                   </Title>
                   <Text component="p" size="sm" lh="lg" className={styles.stepDesc}>
-                    {t(`howItWorks.steps.${id}.desc`)}
+                    {t(`howItWorks.steps.0${i + 1}.desc`)}
                   </Text>
                 </Stack>
               </Box>

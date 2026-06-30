@@ -9,6 +9,7 @@ import avatar1 from '@/shared/images/avatar-1.webp';
 import avatar2 from '@/shared/images/avatar-2.webp';
 import study from '@/shared/images/study.webp';
 import styles from './Hero.module.scss';
+import { ANCHORS } from '@shared/constants/anchors';
 
 const stackImages = [
   { src: avatar1, altKey: 'hero.images.avatar1' },
@@ -21,7 +22,7 @@ export const Hero = () => {
   const { t } = useTranslation('landing');
 
   return (
-    <Box component="section" className={styles.section}>
+    <Box component="section" id={ANCHORS.features} className={styles.section}>
       <Box className={styles.bgGradient} />
       <Box className={styles.bgCircle1} />
       <Box className={styles.bgCircle2} />

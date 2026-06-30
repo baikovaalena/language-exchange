@@ -1,12 +1,12 @@
 import { ANCHORS } from '@shared/constants/anchors';
 
 interface IAnchorLink {
-  navKey: 'features' | 'howItWorks' | 'reviews';
-  href: string;
+  translationKey: 'features' | 'howItWorks' | 'reviews';
+  anchor: string;
 }
 
 export const ANCHOR_LINKS: IAnchorLink[] = [
-  { navKey: 'features', href: ANCHORS.features },
-  { navKey: 'howItWorks', href: ANCHORS.how },
-  { navKey: 'reviews', href: ANCHORS.reviews },
+  { translationKey: 'features', anchor: ANCHORS.features },
+  { translationKey: 'howItWorks', anchor: ANCHORS.how },
+  { translationKey: 'reviews', anchor: ANCHORS.reviews },
 ];

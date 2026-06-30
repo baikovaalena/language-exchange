@@ -1,10 +1,11 @@
 import { useState } from 'react';
+import type { MouseEvent } from 'react';
 import { ActionIcon, Anchor, Box, Button, Divider, Stack } from '@mantine/core';
 import { IconLanguage, IconMenu2, IconX } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { ROUTES } from '@shared/constants/routes';
-import { scrollToTop } from '@shared/lib/scroll';
+import { scrollToSection, scrollToTop } from '@shared/lib/scroll';
 import { ANCHOR_LINKS } from './model/links';
 import styles from './Navbar.module.scss';
 import { ThemeToggle } from '@shared/ui/ThemeToggle';
@@ -14,16 +15,16 @@ export const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const { t } = useTranslation('landing');
 
+  const handleAnchorClick = (event: MouseEvent<HTMLAnchorElement>, anchor: string) => {
+    event.preventDefault();
+    setMobileOpen(false);
+    scrollToSection(anchor);
+  };
+
   return (
     <Box component="header" className={styles.header}>
       <Box className={styles.inner}>
-        <Link
-          to={ROUTES.home}
-          className={styles.logo}
-          onClick={() => {
-            scrollToTop();
-          }}
-        >
+        <Link to={ROUTES.home} className={styles.logo} onClick={scrollToTop}>
           <Box className={styles.logoIcon}>
             <IconLanguage size={20} stroke={1.5} />
           </Box>
@@ -33,14 +34,14 @@ export const Navbar = () => {
         <Box component="nav" className={styles.nav}>
           {ANCHOR_LINKS.map((link) => (
             <Anchor
-              key={link.navKey}
-              component={Link}
-              to={link.href}
+              key={link.translationKey}
+              href={`#${link.anchor}`}
               size="sm"
               className={styles.navLink}
               underline="never"
+              onClick={(event) => handleAnchorClick(event, link.anchor)}
             >
-              {t(`navbar.links.${link.navKey}`)}
+              {t(`navbar.links.${link.translationKey}`)}
             </Anchor>
           ))}
         </Box>
@@ -83,15 +84,14 @@ export const Navbar = () => {
           <Stack gap="0.25rem">
             {ANCHOR_LINKS.map((link) => (
               <Anchor
-                key={link.navKey}
-                component={Link}
-                to={link.href}
+                key={link.translationKey}
+                href={`#${link.anchor}`}
                 size="md"
                 className={styles.mobileLink}
                 underline="never"
-                onClick={() => setMobileOpen(false)}
+                onClick={(event) => handleAnchorClick(event, link.anchor)}
               >
-                {t(`navbar.links.${link.navKey}`)}
+                {t(`navbar.links.${link.translationKey}`)}
               </Anchor>
             ))}
           </Stack>
